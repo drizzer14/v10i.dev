@@ -47,7 +47,7 @@ export default class extends Document {
 
   public override render(): JSX.Element {
     return (
-      <Html lang="en_US">
+      <Html lang="en">
         <Head />
 
         <body>
