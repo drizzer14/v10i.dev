@@ -15,6 +15,7 @@ module.exports = compose(
     sw: 'service.worker.js',
     disable: process.env.NODE_ENV === 'development',
     runtimeCaching,
+    scope: process.env.BASE_URL,
   },
   reactStrictMode: true,
   typescript: {
