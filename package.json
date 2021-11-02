@@ -37,7 +37,6 @@
     "@nestjs/config": "1.0.2",
     "@nestjs/core": "8.0.6",
     "@nestjs/platform-express": "8.0.6",
-    "@sentry/nextjs": "6.13.2",
     "@types/memory-cache": "0.2.1",
     "@types/react": "17.0.20",
     "@types/react-dom": "17.0.9",

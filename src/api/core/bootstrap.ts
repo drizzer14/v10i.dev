@@ -22,9 +22,6 @@ const initializeNestApplication = async (): Promise<INestApplication> => {
 
     app.setGlobalPrefix('api');
 
-    // @see public/sentry.config.js
-    // app.useGlobalInterceptors(new SentryInterceptor());
-
     return app.init();
   }
 
