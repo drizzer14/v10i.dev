@@ -1,6 +1,22 @@
 {
+  "name": "v10i.dev",
+  "start_url": "https://v10i.dev",
+  "scope": "https://v10i.dev",
+  "display": "fullscreen",
+  "prefer_related_applications": false,
+  "background_color": "hsl(210, 8%, 96%)",
+  "theme_color": "hsl(210, 8%, 96%)",
   "icons": [
-    { "src": "/icon-192.png", "type": "image/png", "sizes": "192x192" },
-    { "src": "/icon-512.png", "type": "image/png", "sizes": "512x512" }
+    {
+      "src": "/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
   ]
 }

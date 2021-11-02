@@ -11,6 +11,8 @@ export const Head: FC = () => {
       <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
       <link rel="manifest" href="/manifest.json" />
+
+      <meta name="theme-color" content="hsl(210, 8%, 96%)" />
     </NextHead>
   );
 };
