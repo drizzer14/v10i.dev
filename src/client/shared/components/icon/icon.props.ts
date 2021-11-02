@@ -8,6 +8,7 @@ export const IconNames = [
   'chevron-up',
   'share',
   'github',
+  'email',
   'logo',
   'rss',
 ] as const;

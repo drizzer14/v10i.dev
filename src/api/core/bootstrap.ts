@@ -7,7 +7,6 @@ import type { INestApplication } from '@nestjs/common';
 import { appConfig } from 'shared/config';
 
 import { AppModule } from './app';
-import { SentryInterceptor } from './interceptors';
 
 // eslint-disable-next-line functional/no-let
 let app: INestApplication | undefined;
@@ -23,7 +22,8 @@ const initializeNestApplication = async (): Promise<INestApplication> => {
 
     app.setGlobalPrefix('api');
 
-    app.useGlobalInterceptors(new SentryInterceptor());
+    // @see public/sentry.config.js
+    // app.useGlobalInterceptors(new SentryInterceptor());
 
     return app.init();
   }

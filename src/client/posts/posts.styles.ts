@@ -13,3 +13,19 @@ export const IncrementPageButton = styled(Button)`
     border-radius: 0.5rem;
   `}
 `;
+
+export const EmptyDataMessage = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 5%;
+
+  padding: 2rem;
+
+  text-align: center;
+
+  & > ul {
+    margin-top: 2rem;
+  }
+`;

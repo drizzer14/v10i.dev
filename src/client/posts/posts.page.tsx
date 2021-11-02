@@ -5,12 +5,21 @@ import bifoldMap from 'fnts/either/operators/bifold-map';
 import { lazyLoad, tryVibrate } from '@/shared/utils';
 
 import { usePosts } from './hooks';
+import { linksConfig } from './config';
 import * as Styled from './posts.styles';
-import { postsConfig } from './posts.config';
+import { postsConfig } from './config/posts.config';
 import { PostSkeleton } from './post-skeleton';
 import { List as PostSkeletonsList } from './shared/components';
 
 const PostsList = lazyLoad('PostsList', () => import('./posts-list'));
+
+const LinksList = lazyLoad(
+  'LinksList',
+  () => import('@/shared/components/links-list'),
+  {
+    ssr: false,
+  }
+);
 
 const Error = lazyLoad('Error', () => import('@/shared/components/error'));
 
@@ -41,6 +50,21 @@ const PostsPage: NextPage = () => {
     (data) => (
       <>
         {data.length > 0 && <PostsList posts={data} />}
+
+        {data.length === 0 && !isLoading && (
+          <Styled.EmptyDataMessage>
+            <p>
+              I haven&apos;t written anything yet 🐈 <br /> go give me a bump
+              somewhere in here:
+            </p>
+
+            <LinksList
+              links={linksConfig}
+              areLinksInteractive={false}
+              areTitlesDefaultShown
+            />
+          </Styled.EmptyDataMessage>
+        )}
 
         {isLoading && (
           <PostSkeletonsList>{renderPostsSkeletons()}</PostSkeletonsList>

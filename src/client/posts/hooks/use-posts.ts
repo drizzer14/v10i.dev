@@ -7,7 +7,7 @@ import { bifoldr } from 'fnts/either/operators/bifold';
 import { internalAPIRequest } from '@/shared/entity';
 import type { ListPost, RequestError, SearchResult } from 'shared/entity';
 
-import { postsConfig } from '../posts.config';
+import { postsConfig } from '../config/posts.config';
 
 type UsePosts = [
   response: Either<RequestError, ListPost[]>,

@@ -1,5 +1,11 @@
 module.exports = (environment, config = {}) => {
-  if (process.env.NODE_ENV === 'production') {
+  /* @ToDo: return sentry when the problem with production deployments resolves
+  https://github.com/getsentry/sentry-javascript/issues/3917
+  https://github.com/vercel/next.js/issues/30561
+  https://github.com/vercel/next.js/discussions/30137#discussioncomment-1538436
+  */
+  // eslint-disable-next-line no-constant-condition, etc/no-commented-out-code
+  if (false /* process.env.NODE_ENV === 'production' */) {
     const chalk = require('chalk');
 
     const { init: initSentry } = require('@sentry/nextjs');

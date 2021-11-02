@@ -1,10 +1,9 @@
 import type { FC } from 'react';
 import NextLink from 'next/link';
 
-import { Icon } from '@/shared/components';
-
-import { useCollapsibleTitle } from '../../../hooks';
-import { CollapsibleTitle } from '../../collapsible-title';
+import { Icon } from '../../icon';
+import { useCollapsibleTitle } from '../../../../core/app/layout/shared/hooks';
+import { CollapsibleTitle } from '../../../../core/app/layout/shared/components/collapsible-title';
 
 import * as Styled from './link.styles';
 import type { LinkProps } from './link.props';

@@ -2,24 +2,20 @@ import type { FC } from 'react';
 
 import { Link } from './link';
 import * as Styled from './links-list.styles';
-import { linksListConfig } from './links-list.config';
-
-type LinksListProps = {
-  areLinksInteractive: boolean;
-  areTitlesDefaultShown: boolean;
-};
+import type { LinksListProps } from './links-list.props';
 
 export const LinksList: FC<LinksListProps> = ({
+  links,
   areLinksInteractive = true,
   areTitlesDefaultShown = false,
 }) => {
   return (
     <Styled.LinksList>
-      {linksListConfig.map((socialLinkProps) => {
+      {links.map((link) => {
         return (
-          <li key={socialLinkProps.title}>
+          <li key={link.title}>
             <Link
-              {...socialLinkProps}
+              {...link}
               isInteractive={areLinksInteractive}
               isTitleDefaultShown={areTitlesDefaultShown}
             />
