@@ -8,8 +8,8 @@
     "email": "d@v10i.dev",
     "url": "https://github.com/drizzer14"
   },
-  "homepage": "https://github.com/v10i/v10i.dev",
-  "repository": "github:v10i/v10i.dev",
+  "homepage": "https://github.com/drizzer14/v10i.dev",
+  "repository": "github:drizzer14/v10i.dev",
   "engines": {
     "node": ">=14.17"
   },

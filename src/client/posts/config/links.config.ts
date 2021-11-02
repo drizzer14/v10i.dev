@@ -1,14 +1,16 @@
 import type { LinksConfig } from '@/shared/components/links-list';
 
+import packageJSON from '../../../../package.json';
+
 export const linksConfig: LinksConfig = [
   {
-    title: 'v10i.dev',
-    href: 'https://github.com/drizzer14/v10i.dev/issues',
+    title: packageJSON.name,
+    href: `${packageJSON.homepage}/issues`,
     icon: 'github',
   },
   {
-    title: 'd@v10i.dev',
-    href: 'mailto:d@v10i.dev',
+    title: packageJSON.author.email,
+    href: `mailto:${packageJSON.author.email}`,
     icon: 'email',
   },
 ];
