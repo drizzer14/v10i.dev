@@ -8,10 +8,15 @@
   "theme_color": "hsl(210, 8%, 96%)",
   "icons": [
     {
-      "src": "/icon-192.png",
+      "src": "/icon-192-maskable.png",
       "type": "image/png",
       "sizes": "192x192",
       "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
     },
     {
       "src": "/icon-512.png",
