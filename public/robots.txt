@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: http://192.168.31.103:3000
+
+# Sitemaps
+Sitemap: http://192.168.31.103:3000/sitemap.xml

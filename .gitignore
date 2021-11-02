@@ -1,0 +1,11 @@
+node_modules
+
+.next
+.idea
+.DS_Store
+
+.content
+.env
+
+*.tsbuildinfo
+*.log

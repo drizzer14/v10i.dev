@@ -1,0 +1,49 @@
+{
+  "exclude": ["node_modules", "next-env.d.ts"],
+  "include": ["globals.d.ts", "src/**/*.ts", "src/**/*.tsx"],
+
+  "compilerOptions": {
+    "target": "es5",
+    "jsx": "preserve",
+    "module": "esnext",
+    "moduleResolution": "node",
+
+    "types": ["node"],
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "baseUrl": "src",
+    "paths": {
+      "$/*": ["api/*"],
+      "@/*": ["client/*"],
+      "public/*": ["../public/*"]
+    },
+
+    "noEmit": true,
+    "allowJs": true,
+    "incremental": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "noErrorTruncation": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+
+    "strict": true,
+    "alwaysStrict": true,
+    "skipLibCheck": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "strictNullChecks": true,
+    "noImplicitReturns": true,
+    "downlevelIteration": true,
+    "noUnusedParameters": true,
+    "noImplicitOverride": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "noStrictGenericChecks": true,
+    "allowUnreachableCode": false,
+    "noUncheckedIndexedAccess": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true
+  }
+}
