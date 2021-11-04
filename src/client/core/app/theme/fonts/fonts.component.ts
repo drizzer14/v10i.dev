@@ -9,7 +9,7 @@ const { baseFontFamily, codeFontFamily } = fontsConfig;
 const makeFontSrc = (fontName: string, weight = ''): string => {
   const trimmedFontName = trimInside(fontName);
 
-  return `url('/fonts/${trimmedFontName}/${trimmedFontName}${
+  return `url('/assets/fonts/${trimmedFontName}/${trimmedFontName}${
     weight && `-${weight}`
   }.ttf') format('truetype')`;
 };
