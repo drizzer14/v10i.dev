@@ -11,7 +11,7 @@ export const Divider = styled.hr`
 
   margin: 2rem auto;
 
-  background-color: var(--faint-weak-line);
+  background-color: var(--faint-strong-line);
 
   border: 0;
 
