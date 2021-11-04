@@ -1,6 +1,6 @@
 export type SEOProps = {
   title: string;
-  description: string;
+  description?: string;
   image?: {
     url: string;
     width: number;
