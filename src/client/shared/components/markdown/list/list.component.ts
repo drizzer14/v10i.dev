@@ -11,7 +11,7 @@ export const List = styled.ul.attrs<ListProps>(({ ordered }) => ({
   as: ordered ? 'ol' : 'ul',
 }))<ListProps>(
   ({ ordered }) => css`
-    --list-indent: 2rem;
+    --list-indent: 1rem;
     --list-item-indent: 0.5rem;
 
     margin-top: var(--list-indent);
