@@ -46,7 +46,7 @@ export const Anchor = forwardRef<HTMLAnchorElement, AnchorProps>(
     }, []);
 
     return (
-      <Link href={href}>
+      <Link href={href} passHref>
         {/* eslint-disable-next-line react/jsx-newline */}
         <Styled.Anchor ref={ref} {...props}>
           {hasFavicon && (
