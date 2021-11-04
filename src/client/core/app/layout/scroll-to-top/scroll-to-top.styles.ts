@@ -33,10 +33,6 @@ export const ScrollToTop = styled(Button)`
 
   ${nonMobile`
     right: calc((100vw - ${mobileWidth}px) / 2 + 2rem);
-
-    &[data-visible='true'] {
-      bottom: 4rem;
-    }
   `}
 
   ${nonMobileWithGap`
