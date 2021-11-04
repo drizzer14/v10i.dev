@@ -28,7 +28,12 @@ export const markdownConfig: Omit<ReactMarkdownOptions, 'children'> = {
     a: Anchor,
     ol: List,
     ul: List,
-    li: ListItem,
+    li: ({ children, ...props }) => (
+      // @ts-ignore: Incorrect library typings
+      <ListItem {...props}>
+        <p>{children}</p>
+      </ListItem>
+    ),
     // @ts-ignore: Incorrect library typings
     hr: Divider,
     // @ts-ignore: Incorrect library typings
