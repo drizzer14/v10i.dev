@@ -17,7 +17,7 @@ const Share = lazyLoad('Share', () => import('./share'), {
   ssr: false,
 });
 
-type PostProps = Omit<SEOProps, 'description'> &
+type PostProps = SEOProps &
   Pick<PostType, 'readTime' | 'excerpt'> & {
     children: string;
   };
@@ -25,6 +25,7 @@ type PostProps = Omit<SEOProps, 'description'> &
 export const Post: FC<PostProps> = ({
   children,
   title,
+  description,
   excerpt,
   url,
   date,
@@ -35,11 +36,11 @@ export const Post: FC<PostProps> = ({
     <>
       <SEO
         title={title}
-        description={excerpt}
+        description={description}
         openGraph={{
           type: 'article',
           title,
-          description: excerpt,
+          description,
           url,
           article: {
             publishedTime: date,

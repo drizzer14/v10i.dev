@@ -1,5 +1,7 @@
 import matter from 'gray-matter';
+import { remark } from 'remark';
 import inject from 'fnts/inject';
+import strip from 'strip-markdown';
 import type { AxiosResponse } from 'axios';
 import bifoldMap from 'fnts/either/operators/bifold-map';
 import { Inject, Injectable, Logger } from '@nestjs/common';
@@ -44,8 +46,9 @@ export class Acquirer {
           return {
             id,
             seo: {
-              ...(data as SEOProps),
-              description: excerpt,
+              ...(data as Pick<SEOProps, 'title' | 'date'>),
+              description:
+                excerpt && remark().use(strip).processSync(excerpt).toString(),
               url: `${appConfig.baseURL}/p/${id}`,
             },
             content: contentWithoutExcerpt,
