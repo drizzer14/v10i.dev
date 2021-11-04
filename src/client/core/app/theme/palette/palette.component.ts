@@ -36,7 +36,7 @@ export const Palette = createGlobalStyle`
 
     --faint-strong-background: var(--faint-weak);
     --faint-strong-text: var(--faint-strong-up);
-    --faint-strong-line: var(--faint-strong);
+    --faint-strong-line: var(--faint-strong-down);
     
     --faint-weak-background: var(--base-weak);
     --faint-weak-line: var(--faint-weak-up);
