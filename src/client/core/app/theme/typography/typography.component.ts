@@ -90,7 +90,7 @@ export const Typography = createGlobalStyle`
 
   b,
   strong {
-    font-weight: bolder;
+    font-weight: 500;
   }
 
   s,
