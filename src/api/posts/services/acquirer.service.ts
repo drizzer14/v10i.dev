@@ -45,6 +45,7 @@ export class Acquirer {
             id,
             seo: {
               ...(data as SEOProps),
+              description: excerpt,
               url: `${appConfig.baseURL}/p/${id}`,
             },
             content: contentWithoutExcerpt,
