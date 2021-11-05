@@ -21,6 +21,10 @@ export class Acquirer {
     private readonly apiConfig: APIConfig
   ) {}
 
+  private static stripMarkdown(content: string): string {
+    return remark().use(strip).processSync(content).toString();
+  }
+
   public async get(id: string): Promise<Post> {
     return bifoldMap<RequestError, AxiosResponse<string>, Post>(
       await githubAPIRequest(
@@ -47,13 +51,14 @@ export class Acquirer {
             id,
             seo: {
               ...(data as Pick<SEOProps, 'title' | 'date'>),
-              description:
-                excerpt && remark().use(strip).processSync(excerpt).toString(),
+              description: excerpt && Acquirer.stripMarkdown(excerpt),
               url: `${appConfig.baseURL}/p/${id}`,
             },
             content: contentWithoutExcerpt,
             readTime: Math.ceil(
-              contentWithoutExcerpt.replace(/\n/g, ' ').split(' ').length / 225
+              Acquirer.stripMarkdown(contentWithoutExcerpt)
+                .replace(/\n/g, ' ')
+                .split(' ').length / 225
             ),
             excerpt,
           };
