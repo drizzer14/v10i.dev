@@ -26,8 +26,6 @@ export const Language: FC<LanguageProps> = ({ language }) => {
   }, [language]);
 
   return (
-    <Styled.Language language={language}>
-      <small>{formattedLanguage}</small>
-    </Styled.Language>
+    <Styled.Language language={language} data-language={formattedLanguage} />
   );
 };

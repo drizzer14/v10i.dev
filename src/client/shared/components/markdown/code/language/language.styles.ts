@@ -31,6 +31,14 @@ export const Language = styled.span<{
     border-top-left-radius: 0.5rem;
   `}
 
+  &:before {
+    display: inline-block;
+
+    margin-top: 2px;
+
+    content: attr(data-language);
+  }
+
   &:after {
     position: absolute;
     right: -1rem;
