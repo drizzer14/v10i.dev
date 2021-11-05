@@ -41,7 +41,7 @@ module.exports = {
     'plugin/rational-order': [
       true,
       {
-        'border-in-box-model': false,
+        'border-in-box-model': true,
         'empty-line-between-groups': true,
       },
     ],
