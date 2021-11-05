@@ -9,6 +9,7 @@ export const Language = styled.span<{
 
   position: relative;
 
+  display: block;
   align-self: flex-start;
 
   padding: 2px var(--icon-size) 0 2rem;

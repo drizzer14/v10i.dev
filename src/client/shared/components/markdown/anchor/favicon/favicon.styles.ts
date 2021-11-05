@@ -4,7 +4,7 @@ export const Favicon = styled.img`
   position: relative;
   bottom: -1px;
 
-  width: auto;
+  width: 16px;
 
   margin: 0 0.25rem;
 
