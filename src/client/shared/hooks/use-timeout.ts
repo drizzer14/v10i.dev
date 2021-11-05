@@ -1,7 +1,6 @@
 /*
   eslint-disable eslint-comments/disable-enable-pair, 
   functional/immutable-data, 
-  functional/no-expression-statement,
   react-hooks/exhaustive-deps
 */
 import { just } from 'fnts/maybe';

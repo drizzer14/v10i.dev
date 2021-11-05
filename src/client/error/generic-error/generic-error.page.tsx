@@ -28,7 +28,7 @@ const GenericError: NextPage<GenericErrorProps> = ({ error }) => {
   );
 };
 
-// eslint-disable-next-line functional/no-expression-statement, functional/immutable-data
+// eslint-disable-next-line functional/immutable-data
 GenericError.getInitialProps = ({ res, err }) => {
   return {
     error: {

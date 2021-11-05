@@ -64,7 +64,6 @@ export const getServerSideProps = maybeNotFoundGSSP(
             date,
             imageURL,
           } of posts) {
-            // eslint-disable-next-line functional/no-expression-statement
             feed.addItem({
               title,
               description: excerpt,

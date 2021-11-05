@@ -16,12 +16,12 @@ export const useLayoutUpdateEffect = (
   }, [effect, ...deps]);
 
   useEffect(() => {
-    /* eslint-disable functional/no-expression-statement, functional/immutable-data */
+    /* eslint-disable functional/immutable-data */
     mountRef.current = true;
 
     return () => {
       mountRef.current = false;
     };
-    /* eslint-enable functional/no-expression-statement, functional/immutable-data */
+    /* eslint-enable functional/immutable-data */
   }, []);
 };

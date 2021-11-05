@@ -1,10 +1,4 @@
-import {
-  createElement,
-  DetailedHTMLProps,
-  forwardRef,
-  HTMLAttributes,
-  useMemo,
-} from 'react';
+import { DetailedHTMLProps, forwardRef, HTMLAttributes, useMemo } from 'react';
 
 import * as Styled from './heading.styles';
 
