@@ -16,7 +16,7 @@ export const ScrollToTop: FC = () => {
   const timeoutRef = useMaybeRef<NodeJS.Timeout>();
 
   useScrollThreshold((isPastThreshold) => {
-    // eslint-disable-next-line functional/immutable-data, functional/no-expression-statement
+    // eslint-disable-next-line functional/immutable-data
     timeoutRef.current = bind(timeoutRef.current, (timeoutId) => {
       clearTimeout(timeoutId);
 

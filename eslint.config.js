@@ -288,13 +288,13 @@ module.exports = {
     'etc/no-misused-generics': 'off',
     'etc/no-t': 'error',
     'etc/prefer-less-than': 'warn',
-    'etc/no-commented-out-code': 'error',
+    'etc/no-commented-out-code': 'warn',
 
     'functional/no-mixed-type': 'off',
     'functional/no-throw-statement': 'off',
-    'functional/functional-parameters': 'off',
     'functional/prefer-readonly-type': 'off',
-    'functional/no-expression-statement': ['warn', { ignoreVoid: true }],
+    'functional/functional-parameters': 'off',
+    'functional/no-expression-statement': 'off',
     'functional/no-return-void': 'warn',
     'functional/prefer-tacit': 'error',
     'functional/immutable-data': [
