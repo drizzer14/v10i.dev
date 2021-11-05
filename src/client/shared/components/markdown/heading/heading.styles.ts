@@ -1,6 +1,21 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import { nonMobileWithGap } from '@/shared/mixin';
+
+export const Heading = styled.h2<{ as: string }>(({ as }) => {
+  switch (as) {
+    case 'h5': {
+      return css`
+        margin: 1rem 0 0.5rem;
+      `;
+    }
+    default: {
+      return css`
+        margin: 2rem 0 1rem;
+      `;
+    }
+  }
+});
 
 export const Anchor = styled.a`
   --interaction-color: var(--faint-strong-up);
@@ -9,73 +24,33 @@ export const Anchor = styled.a`
 
   color: var(--base-strong-up);
 
+  scroll-margin-top: 1rem;
+
   &:hover,
   &:focus {
     color: var(--interaction-color);
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5 {
-      color: var(--interaction-color);
-    }
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5 {
-    scroll-margin-top: 1rem;
-  }
-
-  h1 {
-    margin-bottom: 2rem;
-  }
-
-  h2,
-  h3,
-  h4 {
-    margin-bottom: 1rem;
-  }
-
-  h5 {
-    margin-bottom: 0.5rem;
   }
 
   ${nonMobileWithGap`
-    h1,
-    h2,
-    h3,
-    h4,
-    h5 {
-      &:before {
-        position: absolute;
-        right: calc(100% + 8px);
+    &:before {
+      position: absolute;
+      right: calc(100% + 8px);
 
-        color: var(--interaction-color);
+      color: var(--interaction-color);
 
-        opacity: 0;
+      opacity: 0;
 
-        transition: 150ms;
+      transition: 150ms;
 
-        content: '#';
-      }
+      content: '#';
     }
 
     &:hover,
     &:focus {
-      h1,
-      h2,
-      h3,
-      h4,
-      h5 {
-        &:before {
-          right: calc(100% + 4px);
+      &:before {
+        right: calc(100% + 4px);
 
-          opacity: 1;
-        }
+        opacity: 1;
       }
     }
  `}

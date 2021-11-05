@@ -31,9 +31,10 @@ export const Heading = forwardRef<HTMLHeadingElement, HeadingProps>(
     }, [node]);
 
     return (
-      <Styled.Anchor href={`#${id}`}>
-        {createElement(`h${level + 1}`, { id, ref, ...props }, children)}
-      </Styled.Anchor>
+      // @ts-ignore: mistyping of `ref` on `styled-components` part
+      <Styled.Heading {...{ id, ref, as: `h${level + 1}`, ...props }}>
+        <Styled.Anchor href={`#${id}`}>{children}</Styled.Anchor>
+      </Styled.Heading>
     );
   }
 );
