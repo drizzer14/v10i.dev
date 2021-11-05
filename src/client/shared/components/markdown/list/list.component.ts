@@ -1,7 +1,5 @@
 import styled, { css } from 'styled-components';
 
-import { ListItem } from './list-item';
-
 type ListProps = {
   depth: number;
   ordered: boolean;
@@ -16,41 +14,24 @@ export const List = styled.ul.attrs<ListProps>(({ ordered }) => ({
 
     margin-top: var(--list-indent);
     margin-bottom: var(--list-indent);
-    margin-left: 1rem;
 
     ${(ordered
       ? () => css`
-          counter-reset: li;
+          margin-left: 1.25rem;
 
-          ${ListItem} {
-            counter-increment: li;
-
-            &:before {
-              content: counter(li);
-
-              top: 0;
-            }
-
-            &:after {
-              position: absolute;
-              right: calc(100% + 0.5rem - 5px);
-              top: 0;
-
-              content: '.';
-            }
+          & > li {
+            list-style-type: decimal;
           }
         `
       : () => css`
-          ${ListItem} {
-            &:before {
-              content: '–';
+          margin-left: 1rem;
 
-              top: -2px;
-            }
+          & > li {
+            list-style-type: disc;
           }
         `)()}
 
-    ${ListItem} {
+    & > li {
       & > ol,
       & > ul {
         margin-top: var(--list-item-indent);
