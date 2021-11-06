@@ -48,6 +48,9 @@ export const Post: FC<PostProps> = ({
           },
           images: image && [image],
         }}
+        twitter={{
+          cardType: image ? 'summary' : 'summary_large_image',
+        }}
       />
 
       <Styled.Post>
