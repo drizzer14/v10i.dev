@@ -17,4 +17,8 @@ export const Blockquote = styled.blockquote`
   ${nonMobile`
     border-radius: 1rem;
   `}
+
+  & > *:last-child {
+    margin-bottom: 0;
+  }
 `;
