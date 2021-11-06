@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
+import { size } from '@/shared/mixin';
 import { Button } from '@/shared/components';
-import { nonMobile, size } from '@/shared/mixin';
 
 export const Share = styled(Button)`
   position: relative;
@@ -14,10 +14,6 @@ export const Share = styled(Button)`
   border-radius: 0.75rem;
 
   transition: 150ms;
-
-  ${nonMobile`
-    left: -2rem;
-  `}
 
   & > svg {
     ${size('0.625rem')};
