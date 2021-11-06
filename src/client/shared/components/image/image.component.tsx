@@ -11,14 +11,14 @@ type ImageProps = {
 
 export const Image: FC<ImageProps> = ({ src, alt, title, className }) => {
   return (
-    <Styled.Image className={className}>
-      <img src={src} alt={alt} />
+    <Styled.Figure className={className}>
+      <Styled.Image src={src} alt={alt} />
 
       {title && (
         <Styled.Caption>
           <small>{title}</small>
         </Styled.Caption>
       )}
-    </Styled.Image>
+    </Styled.Figure>
   );
 };
