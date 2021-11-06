@@ -13,7 +13,7 @@ export const Anchor = forwardRef<HTMLAnchorElement, AnchorProps>(
   // eslint-disable-next-line prefer-arrow/prefer-arrow-functions
   function Anchor({ node: _, children, href, ...props }, ref) {
     return (
-      <Link href={href} passHref>
+      <Link href={href} passHref prefetch={href.startsWith('/')}>
         {/* eslint-disable-next-line react/jsx-newline */}
         <Styled.Anchor ref={ref} {...props}>
           {children}
