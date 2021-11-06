@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { Image } from '@/shared/components';
 import { Meta as PostMeta } from '@/posts/shared/components';
-import { nonMobileWithGap, mobileWidth } from '@/shared/mixin';
+import { nonMobileWithGap, mobileWidth, nonMobile } from '@/shared/mixin';
 
 export const Post = styled.article`
   position: relative;
@@ -35,5 +35,18 @@ export const Meta = styled(PostMeta)`
 `;
 
 export const Hero = styled(Image)`
+  position: relative;
+  left: -2rem;
+
+  width: calc(100% + 4rem);
+
   margin: 2rem 0;
+
+  & > img {
+    border-radius: 0;
+
+    ${nonMobile`
+      border-radius: var(--border-radius);
+    `}
+  }
 `;

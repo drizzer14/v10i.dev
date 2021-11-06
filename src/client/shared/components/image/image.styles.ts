@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const Figure = styled.figure`
+  --border-radius: 0.5rem;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,7 +13,7 @@ export const Figure = styled.figure`
 export const Image = styled.img`
   object-fit: contain;
 
-  border-radius: 0.5rem;
+  border-radius: var(--border-radius);
 `;
 
 export const Caption = styled.figcaption`

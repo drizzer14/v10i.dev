@@ -53,6 +53,8 @@ export const Post: FC<PostProps> = ({
       <Styled.Post>
         <Progress />
 
+        {image && <Styled.Hero src={image.url} alt={title} />}
+
         <Styled.Title>{title}</Styled.Title>
 
         <Styled.Meta date={date} readTime={readTime} />
@@ -62,8 +64,6 @@ export const Post: FC<PostProps> = ({
         {matchDevice({
           nonDesktop: () => <Share title={title} text={excerpt!} url={url} />,
         })}
-
-        {image && <Styled.Hero src={image.url} alt={title} />}
 
         <Markdown>{children}</Markdown>
 
