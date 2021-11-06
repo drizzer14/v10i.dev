@@ -1,6 +1,7 @@
 import dayjs from 'dayjs';
 import tap from 'fnts/tap';
 import { compose } from 'fnts';
+import utc from 'dayjs/plugin/utc';
 import { Feed, Author } from 'feed';
 import { createElement } from 'react';
 import { renderToString } from 'react-dom/server';
@@ -19,6 +20,8 @@ import { RequestError, SearchResult } from 'shared/entity';
 import { internalAPIRequest, PageProps } from '@/shared/entity';
 
 import packageJSON from '../../../package.json';
+
+dayjs.extend(utc);
 
 type RSSPageProps = PageProps<unknown>;
 

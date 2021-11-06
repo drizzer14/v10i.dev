@@ -1,5 +1,6 @@
-import { nonMobile } from '@/shared/mixin';
 import { createGlobalStyle } from 'styled-components';
+
+import { nonMobile } from '@/shared/mixin';
 
 import { typographyConfig } from './typography.config';
 
