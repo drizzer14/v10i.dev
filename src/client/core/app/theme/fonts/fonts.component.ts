@@ -24,7 +24,7 @@ export const Fonts = createGlobalStyle`
     font-weight: 300;
     font-family: ${codeFontFamily};
     font-style: normal;
-    font-display: swap;
+    font-display: fallback;
     src: ${makeFontSrc(codeFontFamily, 'Light')};
   }
   
@@ -32,7 +32,7 @@ export const Fonts = createGlobalStyle`
     font-weight: 400;
     font-family: ${codeFontFamily};
     font-style: normal;
-    font-display: swap;
+    font-display: fallback;
     src: ${makeFontSrc(codeFontFamily, 'Regular')};
   }
 
@@ -40,7 +40,7 @@ export const Fonts = createGlobalStyle`
     font-weight: 400;
     font-family: ${baseFontFamily};
     font-style: normal;
-    font-display: swap;
+    font-display: fallback;
     src: ${makeFontSrc(baseFontFamily, 'Light')};
   }
 
@@ -48,7 +48,7 @@ export const Fonts = createGlobalStyle`
     font-weight: 400;
     font-family: ${baseFontFamily};
     font-style: italic;
-    font-display: swap;
+    font-display: fallback;
     src: ${makeFontSrc(baseFontFamily, 'LightItalic')};
   }
 
@@ -56,7 +56,7 @@ export const Fonts = createGlobalStyle`
     font-weight: 500;
     font-family: ${baseFontFamily};
     font-style: normal;
-    font-display: swap;
+    font-display: fallback;
     src: ${makeFontSrc(baseFontFamily, 'Medium')};
   }
 
@@ -64,7 +64,7 @@ export const Fonts = createGlobalStyle`
     font-weight: 500;
     font-family: ${baseFontFamily};
     font-style: italic;
-    font-display: swap;
+    font-display: fallback;
     src: ${makeFontSrc(baseFontFamily, 'MediumItalic')};
   }
 
@@ -72,7 +72,7 @@ export const Fonts = createGlobalStyle`
     font-weight: 700;
     font-family: ${baseFontFamily};
     font-style: normal;
-    font-display: swap;
+    font-display: fallback;
     src: ${makeFontSrc(baseFontFamily, 'Bold')};
   }
 
@@ -80,7 +80,7 @@ export const Fonts = createGlobalStyle`
     font-weight: 700;
     font-family: ${baseFontFamily};
     font-style: italic;
-    font-display: swap;
+    font-display: fallback;
     src: ${makeFontSrc(baseFontFamily, 'BoldItalic')};
   }
 `;
