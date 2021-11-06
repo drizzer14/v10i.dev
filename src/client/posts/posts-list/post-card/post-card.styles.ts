@@ -15,6 +15,14 @@ export const PostCard = styled.article`
   `}
 `;
 
+export const Title = styled.h3`
+  margin-bottom: 0.5rem;
+
+  color: var(--base-strong);
+
+  transition: color 150ms;
+`;
+
 export const Link = styled.a`
   & > figure {
     transition: opacity 150ms;
@@ -22,7 +30,7 @@ export const Link = styled.a`
 
   &:hover,
   &:focus {
-    & > h3 {
+    & > ${Title} {
       color: var(--faint-strong-up);
     }
 
@@ -30,12 +38,6 @@ export const Link = styled.a`
       opacity: 0.5;
     }
   }
-`;
-
-export const Title = styled.h3`
-  color: var(--base-strong);
-
-  transition: color 150ms;
 `;
 
 export const Description = styled.div`

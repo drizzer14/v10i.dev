@@ -24,31 +24,30 @@ export const Typography = createGlobalStyle`
 
   h2 {
     font-weight: 500;
-    font-size: 2rem;
+    font-size: 2.25rem;
     line-height: 150%;
     letter-spacing: 0.01em;
   }
 
   h3 {
-    font-weight: 700;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 150%;
+    letter-spacing: 0.01em;
+  }
+
+  h4 {
+    font-weight: 500;
     font-size: 1.5rem;
     line-height: 175%;
     letter-spacing: 0.015em;
   }
 
-  h4 {
+  h5 {
     font-weight: 700;
     font-size: 1.1rem;
     line-height: 175%;
     letter-spacing: 0.04em;
-  }
-
-  h5 {
-    font-weight: 700;
-    font-size: 1.1rem;
-    font-variant: all-small-caps;
-    line-height: 175%;
-    letter-spacing: 0.075em;
   }
 
   small {
