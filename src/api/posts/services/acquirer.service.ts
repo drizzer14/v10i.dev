@@ -50,7 +50,7 @@ export class Acquirer {
           return {
             id,
             seo: {
-              ...(data as Pick<SEOProps, 'title' | 'date'>),
+              ...(data as Pick<SEOProps, 'title' | 'date' | 'image'>),
               description: excerpt && Acquirer.stripMarkdown(excerpt),
               url: `${appConfig.baseURL}/p/${id}`,
             },
