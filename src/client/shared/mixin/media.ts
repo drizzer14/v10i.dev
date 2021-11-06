@@ -3,7 +3,7 @@ import { css } from 'styled-components';
 import { remToPx } from './converters';
 import { Mixin, mixin } from './mixin';
 
-export const mobileWidth = 600;
+export const mobileWidth = 680;
 
 export const mobileWidthWithGap = mobileWidth + remToPx(4);
 
