@@ -14,6 +14,7 @@
     "node": ">=14.17"
   },
   "scripts": {
+    "prestart": "rimraf public/{robots.txt,service.worker.js,sitemap.xml,workbox-*.js}",
     "start": "env-cmd -x next dev --hostname \\$HOST --port \\$PORT",
     "build": "next build",
     "postbuild": "next-sitemap --config next-sitemap.config.js",
@@ -113,6 +114,7 @@
     "next-sitemap": "^1.6.168",
     "npm-package-json-lint": "^5.2.4",
     "prettier": "^2.4.0",
+    "rimraf": "^3.0.2",
     "standard-version": "^9.3.2",
     "stylelint": "^14.0.1",
     "stylelint-config-prettier": "^9.0.3",

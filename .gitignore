@@ -9,3 +9,8 @@ node_modules
 
 *.tsbuildinfo
 *.log
+
+public/robots.txt
+public/service.worker.js
+public/sitemap.xml
+public/workbox-*.js
