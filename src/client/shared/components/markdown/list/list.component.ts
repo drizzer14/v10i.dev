@@ -32,8 +32,8 @@ export const List = styled.ul.attrs<ListProps>(({ ordered }) => ({
         `)()}
 
     & > li {
-      & > ol,
-      & > ul {
+      & > p > ol,
+      & > p > ul {
         margin-top: var(--list-item-indent);
         margin-bottom: 0;
       }
