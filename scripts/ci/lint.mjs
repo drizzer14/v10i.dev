@@ -35,10 +35,7 @@ await (linter
   : Promise.all(
       [
         linters.codestyle,
-        /*
-          Disabling the stylelint until it supports styled-components again
-        */
-        // linters.styles,
+        linters.styles,
         linters.types,
         linters['package-json'],
       ].map((element) => run(element))
