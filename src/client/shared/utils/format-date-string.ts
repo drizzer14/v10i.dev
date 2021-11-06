@@ -1,8 +1,8 @@
 import dayjs from 'dayjs';
-import utc from 'dayjs/plugin/utc';
+import customParseFormat from 'dayjs/plugin/customParseFormat';
 
-dayjs.extend(utc);
+dayjs.extend(customParseFormat);
 
 export const formatDateString = (dateString: string): string => {
-  return dayjs(dateString).utc().format('D MMMM YYYY');
+  return dayjs(dateString, 'DD-MM-YYYY').format('D MMMM YYYY');
 };
