@@ -18,7 +18,7 @@
     "build": "next build",
     "postbuild": "next-sitemap --config next-sitemap.config.js",
     "serve": "env-cmd -x next start --hostname \\$HOST --port \\$PORT",
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "test:coverage": "jest --coverage",
     "lint:formatting": "yarn lint formatting",
     "lint:boundaries": "yarn lint boundaries",
