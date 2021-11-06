@@ -40,7 +40,7 @@ export const Hero = styled(Image)`
 
   width: calc(100% + 4rem);
 
-  margin: 2rem 0;
+  margin-bottom: 2rem;
 
   & > img {
     border-radius: 0;

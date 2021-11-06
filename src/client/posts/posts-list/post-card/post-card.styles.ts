@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import { nonMobileWithGap } from '@/shared/mixin';
+import { Image } from '@/shared/components';
 
 export const PostCard = styled.article`
   display: flex;
@@ -15,6 +16,10 @@ export const PostCard = styled.article`
   `}
 `;
 
+export const Hero = styled(Image)`
+  margin-top: 0;
+`;
+
 export const Title = styled.h3`
   margin-bottom: 0.5rem;
 
@@ -24,7 +29,7 @@ export const Title = styled.h3`
 `;
 
 export const Link = styled.a`
-  & > figure {
+  & > ${Hero} {
     transition: opacity 150ms;
   }
 
@@ -34,7 +39,7 @@ export const Link = styled.a`
       color: var(--faint-strong-up);
     }
 
-    & > figure {
+    & > ${Hero} {
       opacity: 0.5;
     }
   }
