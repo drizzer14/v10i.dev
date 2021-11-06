@@ -2,10 +2,13 @@ import type { NextSeoProps } from 'next-seo';
 
 import { appConfig } from 'shared/config';
 
-const title = 'v10i';
+import packageJSON from '../../../../package.json';
+
+const title = packageJSON.name;
 
 export type SEOConfig = Omit<
   NextSeoProps,
+  | 'additionalLinkTags'
   | 'additionalMetaTags'
   | 'canonical'
   | 'defaultTitle'
@@ -23,7 +26,7 @@ export const seoConfig: SEOConfig = {
   title,
   description: '💻 🖊',
   twitter: {
-    cardType: 'summary',
+    cardType: 'summary_large_image',
   },
   openGraph: {
     locale: 'en_US',
@@ -39,24 +42,4 @@ export const seoConfig: SEOConfig = {
       },
     ],
   },
-  additionalLinkTags: [
-    {
-      rel: 'icon',
-      href: '/favicon.ico',
-      sizes: 'any',
-    },
-    {
-      rel: 'icon',
-      href: '/icon.svg',
-      type: 'image/svg+xml',
-    },
-    {
-      rel: 'apple-touch-icon',
-      href: '/apple-touch-icon.png',
-    },
-    {
-      rel: 'manifest',
-      href: '/manifest.json',
-    },
-  ],
 };
