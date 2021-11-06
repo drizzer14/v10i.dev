@@ -11,8 +11,7 @@ export const Footer = styled.footer`
   width: 100%;
   max-width: ${mobileWidth}px;
 
-  margin: 2rem 0 0;
-  padding: 1rem 2rem 4rem;
+  padding: 0 2rem 2rem;
 
   color: var(--faint-strong-text);
 
@@ -24,8 +23,6 @@ export const Footer = styled.footer`
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-
-    padding: 1rem 2rem 2rem;
 
     & > *:not(:first-child) {
       margin-top: 0;
