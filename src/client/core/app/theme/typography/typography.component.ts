@@ -1,3 +1,4 @@
+import { nonMobile } from '@/shared/mixin';
 import { createGlobalStyle } from 'styled-components';
 
 import { typographyConfig } from './typography.config';
@@ -17,38 +18,60 @@ export const Typography = createGlobalStyle`
   
   h1 {
     font-weight: 500;
-    font-size: 2.5rem;
+    font-size: 2rem;
     line-height: 150%;
     letter-spacing: 0.015em;
   }
 
   h2 {
     font-weight: 500;
-    font-size: 2.25rem;
+    font-size: 1.8rem;
     line-height: 150%;
     letter-spacing: 0.01em;
   }
 
   h3 {
     font-weight: 500;
-    font-size: 2rem;
+    font-size: 1.6rem;
     line-height: 150%;
     letter-spacing: 0.01em;
   }
 
   h4 {
     font-weight: 500;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     line-height: 175%;
     letter-spacing: 0.015em;
   }
 
   h5 {
     font-weight: 700;
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 175%;
     letter-spacing: 0.04em;
   }
+
+  ${nonMobile`
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      font-size: 2.25rem;
+    }
+
+    h3 {
+      font-size: 2rem;
+    }
+
+    h4 {
+      font-size: 1.5rem;
+    }
+
+    h5 {
+      font-size: 1.1rem;
+    }
+  `}
 
   small {
     font-size: calc(2 / 3 * 1rem);
