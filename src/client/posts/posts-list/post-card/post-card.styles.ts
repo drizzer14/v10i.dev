@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { nonMobileWithGap } from '@/shared/mixin';
+import { nonMobile, nonMobileWithGap } from '@/shared/mixin';
 import { Image } from '@/shared/components';
 
 export const PostCard = styled.article`
@@ -17,7 +17,27 @@ export const PostCard = styled.article`
 `;
 
 export const Hero = styled(Image)`
+  position: relative;
+  left: -2rem;
+
+  width: calc(100% + 4rem);
+
   margin-top: 0;
+
+  & > img {
+    border-radius: 0;
+  }
+
+  ${nonMobile`
+    position: static;
+    left: unset;
+
+    width: 100%;
+
+    & > img {
+      border-radius: var(--border-radius);
+    }
+  `}
 `;
 
 export const Title = styled.h3`
