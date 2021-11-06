@@ -72,6 +72,7 @@
     "@babel/plugin-proposal-decorators": "^7.15.4",
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
+    "@stylelint/postcss-css-in-js": "^0.37.2",
     "@svgr/webpack": "^5.5.0",
     "@testing-library/react": "^12.1.2",
     "@testing-library/react-hooks": "^7.0.2",
@@ -118,7 +119,6 @@
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-order": "^5.0.0",
     "stylelint-prettier": "^2.0.0",
-    "stylelint-processor-styled-components": "^1.10.0",
     "ts-jest": "^27.0.7",
     "zx": "^4.2.0"
   }

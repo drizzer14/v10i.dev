@@ -1,5 +1,5 @@
 module.exports = {
-  processors: ['stylelint-processor-styled-components'],
+  customSyntax: '@stylelint/postcss-css-in-js',
   extends: [
     'stylelint-config-prettier',
     'stylelint-config-recommended',
@@ -41,6 +41,7 @@ module.exports = {
     'plugin/rational-order': [
       true,
       {
+        severity: 'warning',
         'border-in-box-model': true,
         'empty-line-between-groups': true,
       },
