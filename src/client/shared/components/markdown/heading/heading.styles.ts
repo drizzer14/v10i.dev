@@ -1,8 +1,12 @@
-import styled, { css } from 'styled-components';
+import styled, { css, FlattenSimpleInterpolation } from 'styled-components';
 
 import { nonMobileWithGap } from '@/shared/mixin';
 
-export const Heading = styled.h2<{ as: string }>(({ as }) => {
+type HeadingProps = {
+  as: string;
+};
+
+const indentHeading = ({ as }: HeadingProps): FlattenSimpleInterpolation => {
   switch (as) {
     case 'h5': {
       return css`
@@ -15,7 +19,13 @@ export const Heading = styled.h2<{ as: string }>(({ as }) => {
       `;
     }
   }
-});
+};
+
+export const Heading = styled.h2<HeadingProps>`
+  ${indentHeading};
+
+  scroll-margin-top: 1rem;
+`;
 
 export const Anchor = styled.a`
   --interaction-color: var(--faint-strong-up);
@@ -23,8 +33,6 @@ export const Anchor = styled.a`
   position: relative;
 
   color: var(--base-strong-up);
-
-  scroll-margin-top: 1rem;
 
   &:hover,
   &:focus {
