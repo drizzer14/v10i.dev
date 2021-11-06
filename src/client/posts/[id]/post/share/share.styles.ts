@@ -6,8 +6,7 @@ import { Button } from '@/shared/components';
 export const Share = styled(Button)`
   position: relative;
 
-  margin-top: 1rem;
-  margin-bottom: 2rem;
+  margin: 2rem 0 !important;
 
   padding: 6px 0.75rem 8px;
 
