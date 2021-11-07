@@ -12,7 +12,17 @@ export const Head: FC = () => {
 
       <link rel="manifest" href="/manifest.json" />
 
-      <meta name="theme-color" content="hsl(210, 8%, 96%)" />
+      <meta
+        name="theme-color"
+        media="(prefers-color-scheme: light)"
+        content="hsl(210, 8%, 96%)"
+      />
+
+      <meta
+        name="theme-color"
+        media="(prefers-color-scheme: dark)"
+        content="hsl(210, 9%, 22%)"
+      />
     </NextHead>
   );
 };
