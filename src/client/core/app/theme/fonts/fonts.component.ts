@@ -1,18 +1,37 @@
-import { createGlobalStyle } from 'styled-components';
-
-import { trimInside } from 'shared/utils';
+import {
+  createGlobalStyle,
+  css,
+  FlattenSimpleInterpolation,
+} from 'styled-components';
 
 import { fontsConfig } from './fonts.config';
 
 const { baseFontFamily, codeFontFamily } = fontsConfig;
 
-const makeFontSrc = (fontName: string, weight = ''): string => {
-  const trimmedFontName = trimInside(fontName);
+const makeFamilyFontFaces = (
+  fontFamily: string,
+  fontNames: string[]
+): FlattenSimpleInterpolation => css`
+  ${fontNames.map((fontName) => {
+    const isItalic = /Italic/.test(fontName);
 
-  return `url('/assets/fonts/${trimmedFontName}/${trimmedFontName}${
-    weight && `-${weight}`
-  }.ttf') format('truetype')`;
-};
+    return css`
+      @font-face {
+        font-weight: ${{
+          Light: 300,
+          Regular: 400,
+          Medium: 500,
+          SemiBold: 600,
+          Bold: 700,
+        }[isItalic ? fontName.slice(0, -6) : fontName]};
+        font-family: ${fontFamily};
+        font-style: ${isItalic ? 'italic' : 'normal'};
+        font-display: fallback;
+        src: ${`url('/assets/fonts/${fontFamily}/${fontFamily}-${fontName}.ttf') format('truetype')`};
+      }
+    `;
+  })};
+`;
 
 export const Fonts = createGlobalStyle`
   :root {
@@ -20,67 +39,16 @@ export const Fonts = createGlobalStyle`
     --font-code: ${codeFontFamily}, monospace;
   }
 
-  @font-face {
-    font-weight: 300;
-    font-family: ${codeFontFamily};
-    font-style: normal;
-    font-display: fallback;
-    src: ${makeFontSrc(codeFontFamily, 'Light')};
-  }
-  
-  @font-face {
-    font-weight: 400;
-    font-family: ${codeFontFamily};
-    font-style: normal;
-    font-display: fallback;
-    src: ${makeFontSrc(codeFontFamily, 'Regular')};
-  }
+  ${makeFamilyFontFaces(codeFontFamily, ['Light', 'Regular'])}
 
-  @font-face {
-    font-weight: 400;
-    font-family: ${baseFontFamily};
-    font-style: normal;
-    font-display: fallback;
-    src: ${makeFontSrc(baseFontFamily, 'Light')};
-  }
-
-  @font-face {
-    font-weight: 400;
-    font-family: ${baseFontFamily};
-    font-style: italic;
-    font-display: fallback;
-    src: ${makeFontSrc(baseFontFamily, 'LightItalic')};
-  }
-
-  @font-face {
-    font-weight: 500;
-    font-family: ${baseFontFamily};
-    font-style: normal;
-    font-display: fallback;
-    src: ${makeFontSrc(baseFontFamily, 'Medium')};
-  }
-
-  @font-face {
-    font-weight: 500;
-    font-family: ${baseFontFamily};
-    font-style: italic;
-    font-display: fallback;
-    src: ${makeFontSrc(baseFontFamily, 'MediumItalic')};
-  }
-
-  @font-face {
-    font-weight: 700;
-    font-family: ${baseFontFamily};
-    font-style: normal;
-    font-display: fallback;
-    src: ${makeFontSrc(baseFontFamily, 'Bold')};
-  }
-
-  @font-face {
-    font-weight: 700;
-    font-family: ${baseFontFamily};
-    font-style: italic;
-    font-display: fallback;
-    src: ${makeFontSrc(baseFontFamily, 'BoldItalic')};
-  }
+  ${makeFamilyFontFaces(baseFontFamily, [
+    'Light',
+    'LightItalic',
+    'Medium',
+    'MediumItalic',
+    'SemiBold',
+    'SemiBoldItalic',
+    'Bold',
+    'BoldItalic',
+  ])}
 `;
