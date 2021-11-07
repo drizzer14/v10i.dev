@@ -15,13 +15,13 @@ export const Head: FC = () => {
       <meta
         name="theme-color"
         media="(prefers-color-scheme: light)"
-        content="hsl(210, 8%, 96%)"
+        content="hsl(210, 11%, 99%)"
       />
 
       <meta
         name="theme-color"
         media="(prefers-color-scheme: dark)"
-        content="hsl(210, 9%, 22%)"
+        content="hsl(210, 9%, 10%)"
       />
     </NextHead>
   );
