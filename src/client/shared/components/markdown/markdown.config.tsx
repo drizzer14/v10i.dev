@@ -25,6 +25,8 @@ export const markdownConfig: Omit<ReactMarkdownOptions, 'children'> = {
     // @ts-ignore: Incorrect library typings
     h4: Heading,
     // @ts-ignore: Incorrect library typings
+    h5: Heading,
+    // @ts-ignore: Incorrect library typings
     a: Anchor,
     ol: List,
     ul: List,

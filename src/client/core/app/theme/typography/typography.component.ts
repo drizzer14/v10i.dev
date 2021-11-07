@@ -19,58 +19,58 @@ export const Typography = createGlobalStyle`
   
   h1 {
     font-weight: 500;
-    font-size: 2rem;
+    font-size: 2.074rem;
     line-height: 150%;
     letter-spacing: 0.015em;
   }
 
   h2 {
     font-weight: 500;
-    font-size: 1.8rem;
+    font-size: 1.728rem;
     line-height: 150%;
     letter-spacing: 0.01em;
   }
 
   h3 {
-    font-weight: 500;
-    font-size: 1.6rem;
+    font-weight: 600;
+    font-size: 1.44rem;
     line-height: 150%;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.015em;
   }
 
   h4 {
-    font-weight: 500;
-    font-size: 1.25rem;
+    font-weight: 600;
+    font-size: 1.2rem;
     line-height: 175%;
-    letter-spacing: 0.015em;
+    letter-spacing: 0.02em;
   }
 
   h5 {
     font-weight: 700;
     font-size: 1rem;
     line-height: 175%;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.03em;
   }
 
   ${nonMobile`
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.488rem;
     }
 
     h2 {
-      font-size: 2.25rem;
+      font-size: 2.074rem;
     }
 
     h3 {
-      font-size: 2rem;
+      font-size: 1.728rem;
     }
 
     h4 {
-      font-size: 1.5rem;
+      font-size: 1.44rem;
     }
 
     h5 {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
     }
   `}
 
