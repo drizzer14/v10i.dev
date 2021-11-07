@@ -8,8 +8,8 @@
     "email": "d@v10i.dev",
     "url": "https://github.com/drizzer14"
   },
-  "homepage": "https://github.com/v10i/v10i.dev",
-  "repository": "github:v10i/v10i.dev",
+  "homepage": "https://github.com/drizzer14/v10i.dev",
+  "repository": "github:drizzer14/v10i.dev",
   "engines": {
     "node": ">=14.17"
   },
@@ -53,7 +53,7 @@
     "highlight.js": "11.2.0",
     "lowlight": "2.3.0",
     "memory-cache": "0.2.0",
-    "next": "12.0.0",
+    "next": "12.0.3",
     "next-pwa": "5.3.1",
     "next-seo": "4.28.1",
     "react": "17.0.2",
