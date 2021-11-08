@@ -14,3 +14,11 @@ public/robots.txt
 public/service.worker.js
 public/sitemap.xml
 public/workbox-*.js
+
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
