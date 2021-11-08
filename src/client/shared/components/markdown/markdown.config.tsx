@@ -14,7 +14,6 @@ import { Blockquote } from './blockquote';
 
 export const markdownConfig: Omit<ReactMarkdownOptions, 'children'> = {
   plugins: [remarkGfm, remarkUnwrapImages],
-  linkTarget: '_blank',
   components: {
     // @ts-ignore: Incorrect library typings
     h1: Heading,
