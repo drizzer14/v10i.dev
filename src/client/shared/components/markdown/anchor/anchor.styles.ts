@@ -5,11 +5,4 @@ export const Anchor = styled.a`
   align-items: baseline;
 
   cursor: pointer;
-
-  &:hover,
-  &:focus {
-    img {
-      opacity: 0.75;
-    }
-  }
 `;
