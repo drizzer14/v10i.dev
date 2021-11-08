@@ -1,19 +1,33 @@
 import remarkGfm from 'remark-gfm';
+import remarkToc from 'remark-toc';
 import remarkUnwrapImages from 'remark-unwrap-images';
+import type { Text } from 'react-markdown/lib/ast-to-react';
+import { uriTransformer } from 'react-markdown/lib/uri-transformer';
 import type { ReactMarkdownOptions } from 'react-markdown/lib/react-markdown';
 
 import { Image } from '../image';
 
 import { Pre } from './pre';
 import { Code } from './code';
-import { Anchor } from './anchor';
 import { Heading } from './heading';
 import { Divider } from './divider';
 import { List, ListItem } from './list';
 import { Blockquote } from './blockquote';
+import { makeSlug } from './shared/utils';
+import { Anchor } from './shared/components';
 
 export const markdownConfig: Omit<ReactMarkdownOptions, 'children'> = {
-  plugins: [remarkGfm, remarkUnwrapImages],
+  remarkPlugins: [remarkGfm, remarkUnwrapImages, [remarkToc, { maxDepth: 3 }]],
+  transformLinkUri: (href, children) => {
+    if (href.startsWith('#')) {
+      return `#${makeSlug((children[0] as Text).value)}`;
+    }
+
+    return uriTransformer(href);
+  },
+  linkTarget: (href) => {
+    return href.startsWith('#') ? undefined : '_blank';
+  },
   components: {
     // @ts-ignore: Incorrect library typings
     h1: Heading,
@@ -29,12 +43,7 @@ export const markdownConfig: Omit<ReactMarkdownOptions, 'children'> = {
     a: Anchor,
     ol: List,
     ul: List,
-    li: ({ children, ...props }) => (
-      // @ts-ignore: Incorrect library typings
-      <ListItem {...props}>
-        <p>{children}</p>
-      </ListItem>
-    ),
+    li: ListItem,
     // @ts-ignore: Incorrect library typings
     hr: Divider,
     // @ts-ignore: Incorrect library typings

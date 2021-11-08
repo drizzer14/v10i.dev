@@ -2,6 +2,8 @@ import styled, { css, FlattenSimpleInterpolation } from 'styled-components';
 
 import { nonMobileWithGap } from '@/shared/mixin';
 
+import { Anchor as MDAnchor } from '../shared/components';
+
 type HeadingProps = {
   as: string;
 };
@@ -27,7 +29,7 @@ export const Heading = styled.h2<HeadingProps>`
   scroll-margin-top: 1rem;
 `;
 
-export const Anchor = styled.a`
+export const Anchor = styled(MDAnchor)`
   --interaction-color: var(--faint-strong-up);
 
   position: relative;
