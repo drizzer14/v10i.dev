@@ -1,3 +1,4 @@
+import emojiRegExp from 'emoji-regex';
 import { DetailedHTMLProps, forwardRef, HTMLAttributes, useMemo } from 'react';
 
 import * as Styled from './heading.styles';
@@ -7,28 +8,30 @@ type HeadingProps = DetailedHTMLProps<
   HTMLHeadingElement
 > & {
   level: number;
-  node: {
-    children: [
-      {
-        value: string;
-      }
-    ];
-  };
+  children: [string];
 };
 
 export const Heading = forwardRef<HTMLHeadingElement, HeadingProps>(
-  function Heading({ children, level, node, ...props }, ref) {
+  function Heading({ children: [children], level, ...props }, ref) {
+    const [emoji, heading] = useMemo<[string | undefined, string]>(() => {
+      const { groups } = children.match(
+        new RegExp(`(?<emoji>(?:${emojiRegExp().source})*)\\s?(?<heading>.+)`)
+      )!;
+
+      return [groups!.emoji, groups!.heading!];
+    }, [children]);
+
     const id = useMemo(() => {
-      return node.children[0].value
+      return heading
         .replace(/\s/g, '-')
         .replace(/[A-Z]/g, (c) => c.toLowerCase());
-    }, [node]);
+    }, [heading]);
 
     return (
       // @ts-ignore: mistyping of `ref` on `styled-components` part
       <Styled.Heading {...{ id, ref, as: `h${level}`, ...props }}>
         <Styled.Anchor href={`#${id}`}>
-          <span>{children}</span>
+          <span>{`${emoji && `${emoji} `}${heading}`}</span>
         </Styled.Anchor>
       </Styled.Heading>
     );
