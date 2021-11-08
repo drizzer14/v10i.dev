@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { mobileWidth, nonMobile, nonMobileWithGap } from '@/shared/mixin';
+import { mobileWidth, nonMobileWithGap } from '@/shared/mixin';
 
 export const Footer = styled.footer`
   display: flex;
@@ -18,16 +18,6 @@ export const Footer = styled.footer`
   & > *:not(:first-child) {
     margin-top: 1rem;
   }
-
-  ${nonMobile`
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-
-    & > *:not(:first-child) {
-      margin-top: 0;
-    }
-  `}
 
   ${nonMobileWithGap`
     padding: 1rem 0 2rem;
