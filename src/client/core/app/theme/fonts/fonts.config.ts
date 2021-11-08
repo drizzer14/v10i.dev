@@ -5,5 +5,5 @@ export type FontsConfig = {
 
 export const fontsConfig: FontsConfig = {
   baseFontFamily: 'Rubik',
-  codeFontFamily: 'Fira Code',
+  codeFontFamily: 'FiraCode',
 };
