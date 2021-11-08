@@ -1,23 +1,20 @@
 import styled from 'styled-components';
 
-import { nonMobileWithGap } from '@/shared/mixin';
-
 export const Divider = styled.hr`
-  position: relative;
-  left: -2rem;
+  --step: 4px;
 
-  width: calc(100% + 4rem);
+  width: 100%;
   height: 1px;
 
   margin: 2rem auto;
 
-  background-color: var(--faint-strong-line);
+  background: repeating-linear-gradient(
+    to right,
+    var(--faint-strong-line),
+    var(--faint-strong-line) var(--step),
+    var(--transparent) var(--step),
+    var(--transparent) calc(var(--step) * 2)
+  );
 
   border: 0;
-
-  ${nonMobileWithGap`
-    position: static;
-
-    width: 100%;
-  `}
 `;
