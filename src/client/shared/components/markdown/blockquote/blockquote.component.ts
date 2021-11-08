@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import type { NormalComponents } from 'react-markdown/lib/complex-types';
 
 import { nonMobile } from '@/shared/mixin';
 
@@ -21,4 +22,4 @@ export const Blockquote = styled.blockquote`
   & > *:last-child {
     margin-bottom: 0;
   }
-`;
+` as NormalComponents['blockquote'];

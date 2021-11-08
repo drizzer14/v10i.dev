@@ -1,9 +1,14 @@
+import type {
+  OrderedListProps,
+  UnorderedListProps,
+  OrderedListComponent,
+  UnorderedListComponent,
+} from 'react-markdown/lib/ast-to-react';
 import styled, { css } from 'styled-components';
 
-type ListProps = {
-  depth: number;
-  ordered: boolean;
-};
+type ListComponent = OrderedListComponent | UnorderedListComponent;
+
+type ListProps = OrderedListProps | UnorderedListProps;
 
 export const List = styled.ul.attrs<ListProps>(({ ordered }) => ({
   as: ordered ? 'ol' : 'ul',
@@ -47,4 +52,4 @@ export const List = styled.ul.attrs<ListProps>(({ ordered }) => ({
       }
     }
   `
-);
+) as ListComponent;

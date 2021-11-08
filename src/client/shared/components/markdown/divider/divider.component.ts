@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import type { NormalComponents } from 'react-markdown/lib/complex-types';
 
 export const Divider = styled.hr`
   --step: 4px;
@@ -17,4 +18,4 @@ export const Divider = styled.hr`
   );
 
   border: 0;
-`;
+` as NormalComponents['hr'];

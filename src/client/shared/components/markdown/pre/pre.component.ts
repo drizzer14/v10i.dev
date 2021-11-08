@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import type { NormalComponents } from 'react-markdown/lib/complex-types';
 
 import { nonMobile, mobileWidth } from '@/shared/mixin';
 
@@ -15,4 +16,4 @@ export const Pre = styled.pre`
   ${nonMobile`
     max-width: calc(${mobileWidth}px + 4rem);
   `}
-`;
+` as NormalComponents['pre'];
