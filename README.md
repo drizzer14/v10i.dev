@@ -12,7 +12,7 @@ GitHub is used as a CMS for this project, the content is stored in the private (
 
 ### Tech stack
 
-- Yarn 1
+- Yarn Berry
 - TypeScript 4.4
 - Next.js 12:
   - `next-pwa`
