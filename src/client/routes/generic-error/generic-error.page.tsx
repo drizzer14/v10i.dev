@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import type { NextPage } from 'next';
 
-import { SEO } from '@/core/seo';
+import { SEO } from '@/modules/seo';
 import { Error } from '@/shared/components';
 import { reportError } from '@/shared/utils';
 

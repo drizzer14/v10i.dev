@@ -1,11 +1,11 @@
 import type { FC } from 'react';
 
-import { SEO } from '@/core/seo';
+import { SEO } from '@/modules/seo';
 import { Markdown } from '@/shared/components';
 import { lazyLoad, matchDevice } from '@/shared/utils';
 import type { Post as PostType, SEOProps } from 'shared/entity';
 
-import packageJSON from '../../../../../package.json';
+import packageJSON from '../../../../../../package.json';
 
 import * as Styled from './post.styles';
 

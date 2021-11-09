@@ -13,13 +13,13 @@ import {
   createSuccessProps,
   maybeNotFoundGSSP,
 } from '@/shared/utils';
-import { seoConfig } from '@/core/config';
+import { seoConfig } from '@/modules/seo';
 import { appConfig } from 'shared/config';
 import { Markdown } from '@/shared/components';
 import { RequestError, SearchResult } from 'shared/entity';
 import { internalAPIRequest, PageProps } from '@/shared/entity';
 
-import packageJSON from '../../../package.json';
+import packageJSON from '../../../../package.json';
 
 dayjs.extend(utc);
 

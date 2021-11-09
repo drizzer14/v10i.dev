@@ -1,1 +1,1 @@
-export { default } from '@/error/not-found';
+export { default } from '@/routes/not-found';

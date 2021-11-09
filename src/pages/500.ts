@@ -1,1 +1,1 @@
-export { default } from '@/error/internal-error';
+export { default } from '@/routes/internal-error';

@@ -104,9 +104,15 @@ module.exports = {
       },
       {
         type: '$module',
-        pattern: 'src/api/*/**/*',
+        pattern: 'src/api/modules/**/*',
         mode: 'file',
         capture: ['module'],
+      },
+      {
+        type: '$route',
+        pattern: 'src/api/routes/**/*',
+        mode: 'file',
+        capture: ['route'],
       },
       {
         type: '$page',
@@ -126,9 +132,15 @@ module.exports = {
       },
       {
         type: '@module',
-        pattern: 'src/client/*/**/*',
+        pattern: 'src/client/modules/**/*',
         mode: 'file',
         capture: ['module'],
+      },
+      {
+        type: '@route',
+        pattern: 'src/client/routes/**/*',
+        mode: 'file',
+        capture: ['route'],
       },
       {
         type: '@page',
@@ -161,22 +173,27 @@ module.exports = {
           },
           {
             from: ['$core'],
-            allow: ['shared', '$module', '$shared', '$core'],
+            allow: ['shared', '$route', '$shared', '$core', '$module'],
+          },
+          {
+            from: ['$module'],
+            allow: ['shared', '$shared', '$core'],
           },
           {
             from: ['$shared'],
             allow: ['shared', '$core', '$shared'],
           },
           {
-            from: ['$module'],
+            from: ['$route'],
             allow: [
               'shared',
               '$shared',
               '$core',
+              '$module',
               [
-                '$module',
+                '$route',
                 {
-                  module: '${module}',
+                  route: '${route}',
                 },
               ],
             ],
@@ -191,18 +208,23 @@ module.exports = {
           },
           {
             from: ['@core'],
-            allow: ['shared', '@shared', '@module', '@core'],
+            allow: ['shared', '@shared', '@route', '@core', '@module'],
           },
           {
             from: ['@module'],
+            allow: ['shared', '@shared', '@core'],
+          },
+          {
+            from: ['@route'],
             allow: [
               'shared',
               '@shared',
               '@core',
+              '@module',
               [
-                '@module',
+                '@route',
                 {
-                  module: '${module}',
+                  route: '${route}',
                 },
               ],
             ],
@@ -211,9 +233,9 @@ module.exports = {
             from: ['@page'],
             allow: [
               [
-                '@module',
+                '@route',
                 {
-                  module: '${page}',
+                  route: '${page}',
                 },
               ],
             ],
@@ -224,7 +246,7 @@ module.exports = {
               [
                 '@core',
                 {
-                  module: '${template}',
+                  route: '${template}',
                 },
               ],
             ],

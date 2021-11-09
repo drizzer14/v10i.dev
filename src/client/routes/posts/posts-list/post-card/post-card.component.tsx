@@ -2,7 +2,7 @@ import Link from 'next/link';
 import type { FC } from 'react';
 
 import type { ListPost } from 'shared/entity';
-import { Meta } from '@/posts/shared/components';
+import { Meta } from '@/routes/posts/shared/components';
 import { lazyLoad, tryVibrate } from '@/shared/utils';
 
 import * as Styled from './post-card.styles';

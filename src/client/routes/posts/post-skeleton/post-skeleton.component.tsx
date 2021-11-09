@@ -1,7 +1,7 @@
 import { FC, memo, useMemo } from 'react';
 
 import { rng } from 'shared/utils';
-import { DotDivider } from '@/posts/shared/components';
+import { DotDivider } from '@/routes/posts/shared/components';
 
 import * as Styled from './post-skeleton.styles';
 import { Skeleton, SkeletonSize } from './skeleton';

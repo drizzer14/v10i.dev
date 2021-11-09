@@ -1,1 +1,1 @@
-export { default, getServerSideProps } from '@/posts/[id]';
+export { default, getServerSideProps } from '@/routes/posts/[id]';
