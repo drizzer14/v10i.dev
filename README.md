@@ -1,10 +1,11 @@
-# [v10.dev](https://v10.dev)
+# [v10i.dev](https://v10i.dev)
 
 ![](https://raw.githubusercontent.com/drizzer14/v10i.dev/main/public/banner.png)
 
 ## About
 
-This repository contains the source code of [v10.dev](https://v10.dev) website.
+This repository contains the source code of [v10i.dev](https://v10i.dev) 
+website.
 
 ### CMS
 
