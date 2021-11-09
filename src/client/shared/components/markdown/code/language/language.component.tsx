@@ -16,7 +16,8 @@ export const Language: FC<LanguageProps> = ({ language }) => {
         return 'JavaScript';
       }
       case 'tsx':
-      case 'jsx': {
+      case 'jsx':
+      case 'yaml': {
         return language.toUpperCase();
       }
       default: {
