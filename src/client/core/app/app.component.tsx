@@ -2,7 +2,7 @@ import type { FC } from 'react';
 import { SWRConfig } from 'swr';
 import type { AppProps } from 'next/app';
 
-import { SEO } from '@/core/seo';
+import { SEO } from '@/modules/seo';
 import { swrConfig } from '@/core/config';
 
 import { Head } from './head';

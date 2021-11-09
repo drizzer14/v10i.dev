@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 
-import { SEO } from '@/core/seo';
+import { SEO } from '@/modules/seo';
 import { HTTPStatus } from 'shared/entity';
 import { Error } from '@/shared/components';
 

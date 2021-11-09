@@ -1,1 +1,1 @@
-export { default, getServerSideProps } from '@/rss';
+export { default, getServerSideProps } from '@/routes/rss';

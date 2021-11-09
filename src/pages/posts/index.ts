@@ -1,1 +1,1 @@
-export { default } from '@/posts';
+export { default } from '@/routes/posts';

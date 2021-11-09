@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { Image } from '@/shared/components';
-import { Meta as PostMeta } from '@/posts/shared/components';
+import { Meta as PostMeta } from '@/routes/posts/shared/components';
 import { nonMobileWithGap, mobileWidth, nonMobile } from '@/shared/mixin';
 
 export const Post = styled.article`

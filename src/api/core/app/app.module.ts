@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 
-import { PostsModule } from '$/posts';
+import { PostsModule } from '$/routes/posts';
 import { ConfigModule } from '$/core/config';
 
 @Module({
