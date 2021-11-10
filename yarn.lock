@@ -10792,17 +10792,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"mdast-util-to-string@npm:3.1.0, mdast-util-to-string@npm:^3.0.0, mdast-util-to-string@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "mdast-util-to-string@npm:3.1.0"
+  checksum: f42ddd4e22f2215a75715b92ea6e3149c4ba356e7781d7b94fc86ded1c79cec3f986afeecef3a4a80068c9b224a6520099783a12146b957de24f020a3e47dd29
+  languageName: node
+  linkType: hard
+
 "mdast-util-to-string@npm:^2.0.0":
   version: 2.0.0
   resolution: "mdast-util-to-string@npm:2.0.0"
   checksum: 0b2113ada10e002fbccb014170506dabe2f2ddacaacbe4bc1045c33f986652c5a162732a2c057c5335cdb58419e2ad23e368e5be226855d4d4e280b81c4e9ec2
-  languageName: node
-  linkType: hard
-
-"mdast-util-to-string@npm:^3.0.0, mdast-util-to-string@npm:^3.1.0":
-  version: 3.1.0
-  resolution: "mdast-util-to-string@npm:3.1.0"
-  checksum: f42ddd4e22f2215a75715b92ea6e3149c4ba356e7781d7b94fc86ded1c79cec3f986afeecef3a4a80068c9b224a6520099783a12146b957de24f020a3e47dd29
   languageName: node
   linkType: hard
 
@@ -16204,7 +16204,7 @@ __metadata:
     jest: ^27.3.1
     lint-staged: ">=10"
     lowlight: 2.3.0
-    mdast-util-to-string: ^3.1.0
+    mdast-util-to-string: 3.1.0
     memory-cache: 0.2.0
     next: 12.0.3
     next-pwa: 5.3.1
