@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 1.2.1 (2021-11-10)
+
+
+### Bug Fixes
+
+* **typography:** make `code` font size relative to the parent ([498939c](https://github.com/drizzer14/v10i.dev/commit/498939cc4b7e398155cc14841ea4becf03cc0759))
+
 ## 1.2.0 (2021-11-10)
 
 
