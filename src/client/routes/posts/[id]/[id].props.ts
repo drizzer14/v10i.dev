@@ -3,8 +3,8 @@ import bifoldMap from 'fnts/either/operators/bifold-map';
 import {
   cacheGSSP,
   createFailProps,
-  createSuccessProps,
   maybeNotFoundGSSP,
+  createSuccessProps,
 } from '@/shared/utils';
 import type { Post, RequestError } from 'shared/entity';
 import { internalAPIRequest, PageProps } from '@/shared/entity';
@@ -26,7 +26,7 @@ export const getServerSideProps = maybeNotFoundGSSP(
         useCache,
       }),
       createFailProps,
-      createSuccessProps
+      (data) => createSuccessProps({ key: data.id, ...data })
     );
   })
 );
