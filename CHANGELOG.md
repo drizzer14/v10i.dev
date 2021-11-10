@@ -2,6 +2,78 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 1.2.1 (2021-11-10)
+
+
+### Features
+
+* **api:** strip markdown before counting reading time ([ce614af](https://github.com/drizzer14/v10i.dev/commit/ce614af97c1604d0d40977148bbe962bc692fcb7))
+* **fonts:** make `strong` and `b` of fixed `font-weight` ([77c0e83](https://github.com/drizzer14/v10i.dev/commit/77c0e835c3b457b1bef8ebd00565e8a8ba2911fe))
+* **image:** align caption to left ([b0d58ca](https://github.com/drizzer14/v10i.dev/commit/b0d58ca069f50753d8d091203593eec580c6ce07))
+* increase container size to 680 pixels ([29cb7a0](https://github.com/drizzer14/v10i.dev/commit/29cb7a08a58250311862afcc646a33c3cab39e95))
+* **layout:** make footer a column on all screens ([92d9ce0](https://github.com/drizzer14/v10i.dev/commit/92d9ce0ebfbbfe7a8e820896fd2ced479a401b1c))
+* **layout:** position `ScrollToTop` 2rem from bottom ([a8a4ef8](https://github.com/drizzer14/v10i.dev/commit/a8a4ef87e6ccb101eb8f0cabf5f826ee8bdec691))
+* **layout:** reduce footer desktop padding ([27f381a](https://github.com/drizzer14/v10i.dev/commit/27f381a8f967845483944414e403632cbf86d21d))
+* **markdown:** add `yaml` language support ([6fc51d9](https://github.com/drizzer14/v10i.dev/commit/6fc51d9169eae7705465f480bf48aaf5b0689e39))
+* **markdown:** brighten `Divider` color ([3d3f51b](https://github.com/drizzer14/v10i.dev/commit/3d3f51bc2a536ebd17d14f4e59e90dce63ebbc63))
+* **markdown:** correctly encode url slugs ([9dbfb17](https://github.com/drizzer14/v10i.dev/commit/9dbfb178180caff535a6a3d3e1aa8ec2cf09241f))
+* **markdown:** make relative anchors target the same document ([c29f1e7](https://github.com/drizzer14/v10i.dev/commit/c29f1e7c982137f1dfef85c6d966aacf3eb8fc2b))
+* **markdown:** move `language` to CSS ([e9e940b](https://github.com/drizzer14/v10i.dev/commit/e9e940b5c3f542980a614f9b57907ee685dcc912))
+* **markdown:** preload relative links ([09caed0](https://github.com/drizzer14/v10i.dev/commit/09caed00259faca88aceae97f8ead7bf9243eeed))
+* **markdown:** reduce `List` margins ([3242937](https://github.com/drizzer14/v10i.dev/commit/32429377366444d49395afd879acc014ce4d7471))
+* **markdown:** remove anchor favicons ([5c2cea4](https://github.com/drizzer14/v10i.dev/commit/5c2cea4f760f0910d58e1e8bd884b57332ed45ce))
+* **markdown:** remove emoji from headings ids ([fa1b3de](https://github.com/drizzer14/v10i.dev/commit/fa1b3de98416078bc6958c8d15875f3d84a05062))
+* **markdown:** update divider styles ([31c017e](https://github.com/drizzer14/v10i.dev/commit/31c017e89036a1586edae027e5c083885bd3816c))
+* **markdown:** update headings generation ([d9e04d0](https://github.com/drizzer14/v10i.dev/commit/d9e04d082db74e2ec61bf40bec4c631e498ad9c4))
+* **markdown:** update list styles ([e94dc90](https://github.com/drizzer14/v10i.dev/commit/e94dc908c4515d409ad4883ea99e2acf313446eb))
+* **markdown:** update styles ([9263b83](https://github.com/drizzer14/v10i.dev/commit/9263b835aee0a75fce9571321a94da86db54d41f))
+* **pages:** remove index page ([4559fb0](https://github.com/drizzer14/v10i.dev/commit/4559fb07ae8d5880568618a1fff74e0e38746a80))
+* **palette:** update `faint-strong-line` color ([ae3b3ca](https://github.com/drizzer14/v10i.dev/commit/ae3b3caaa072ac1307da0a6e0900259d03c7e467))
+* pass `excerpt` as now optional post `description` ([0f7042a](https://github.com/drizzer14/v10i.dev/commit/0f7042a27d1fad078e3a020fd2b2f01cde62243c))
+* **post:** reposition hero image, make it larger ([f6918a8](https://github.com/drizzer14/v10i.dev/commit/f6918a88d30f28060fb92a98f39e2d8aa41aa368))
+* **posts:** add empty data message ([52366bb](https://github.com/drizzer14/v10i.dev/commit/52366bbee802551115138e89a1282f41503f12c7))
+* **posts:** update hero styles in list ([cc44e2b](https://github.com/drizzer14/v10i.dev/commit/cc44e2ba1731dc8234cdaacde2c3f8ade2861565))
+* **post:** update "Share" button margin ([30b8fa1](https://github.com/drizzer14/v10i.dev/commit/30b8fa12c7bf97601ae5b113e7425c0665786304))
+* replace FontAwesome icons with Lucide ([e182aee](https://github.com/drizzer14/v10i.dev/commit/e182aeeea7b4384f03a919bc005d29c922d2ce54))
+* set `next-pwa` scope to base URL ([1ec89b3](https://github.com/drizzer14/v10i.dev/commit/1ec89b321badf9937b081b053a0dc0edab7ca436))
+* strip markdown syntax from post's SEO description ([f9658b1](https://github.com/drizzer14/v10i.dev/commit/f9658b10c201046add9a798ce9d55c3a4d42c60a))
+* **theme:** add `font-display` ([816d36a](https://github.com/drizzer14/v10i.dev/commit/816d36af70afcd9c1efeb4aedb0521eb951ac45b))
+* **theme:** decrease headings' `font-size` on mobile ([d46a560](https://github.com/drizzer14/v10i.dev/commit/d46a560261342c42a31059aca20204bac54f761a))
+* update `banner.png` ([22fe505](https://github.com/drizzer14/v10i.dev/commit/22fe50521ca0cc78c5d5c3cea64d039073b1a608))
+* update `Fira Code` ([d6aab43](https://github.com/drizzer14/v10i.dev/commit/d6aab43acebf2b0c582be78beed3fed1336444d1))
+* update `html.lang` ([7830cd4](https://github.com/drizzer14/v10i.dev/commit/7830cd482f31baf14d37dad2b00ebd0226116629))
+* update `Image` styles, add caption ([3571260](https://github.com/drizzer14/v10i.dev/commit/3571260cb2506723bea049717eda529ba2e4b201))
+* update `next-pwa` scope ([adbd9d5](https://github.com/drizzer14/v10i.dev/commit/adbd9d5268601ac9ce448cdd903b190de9f851b3))
+* update `pwa` configuration ([25126e4](https://github.com/drizzer14/v10i.dev/commit/25126e413407ac76724cff5430b0dfbe90fdc8d9))
+* update `theme-color` values ([9f2b623](https://github.com/drizzer14/v10i.dev/commit/9f2b623341b535999674de4de432a5378f788465))
+* update headings styles ([6986c4a](https://github.com/drizzer14/v10i.dev/commit/6986c4a85d942248035e16474678975f7277fef8))
+* update hero images' styles ([a9d974a](https://github.com/drizzer14/v10i.dev/commit/a9d974a5d58f68e4d3682c4f4504d0f200f46a2b))
+* update icons ([0ceb53f](https://github.com/drizzer14/v10i.dev/commit/0ceb53f5444517896661be5af18eff0f0d31463e))
+* update icons and manifest ([67a5514](https://github.com/drizzer14/v10i.dev/commit/67a55148a3736cc06a5c611f9aa1e2b08737e731))
+* update SEO configuration ([93046ac](https://github.com/drizzer14/v10i.dev/commit/93046ac498d07d2ad2758a70fd0843b27f4d6a87))
+* update styles of headings ([30f171e](https://github.com/drizzer14/v10i.dev/commit/30f171e3763111b15c3d00f4f18c82ea5b01b687))
+
+
+### Bug Fixes
+
+* add dark mode `theme-color` ([429151d](https://github.com/drizzer14/v10i.dev/commit/429151d63d284abf978937bf572d33a72759963e))
+* add predefined date format ([034783c](https://github.com/drizzer14/v10i.dev/commit/034783c050097e0846f233ba0179613ceccb6992))
+* **api:** fix types in `Acquirer` ([17f85c4](https://github.com/drizzer14/v10i.dev/commit/17f85c4724fab6efaadc7fd588a691c834c4db41))
+* **fonts:** set `font-display` to `swap` ([de93a77](https://github.com/drizzer14/v10i.dev/commit/de93a77f8f160a22de0ab2b4debfaf4776992aae))
+* **markdown:** add `passHref` to `Anchor`'s `Link` wrapper ([91e5254](https://github.com/drizzer14/v10i.dev/commit/91e52548100c9e54a8ffdfcd8a3994d4aeadda2b))
+* **markdown:** fix indented lists margins ([1ce21bd](https://github.com/drizzer14/v10i.dev/commit/1ce21bd676ca97e9d992faaa1a979792b7340372))
+* **markdown:** properly generate complex headings ([aae251f](https://github.com/drizzer14/v10i.dev/commit/aae251fc8ad7631b6d0ea26ea122081274fae08d))
+* **markdown:** update component types ([fde1f24](https://github.com/drizzer14/v10i.dev/commit/fde1f24ce2aee29b92133f7bc509185646f31ef4))
+* **markdown:** update list styles ([3173f25](https://github.com/drizzer14/v10i.dev/commit/3173f2500a24304160140df5f326bb8bcabfc343))
+* **markdown:** wrap `ListItem`'s children into `p` ([05b23ba](https://github.com/drizzer14/v10i.dev/commit/05b23baa56b48e1ac696e311923ba39e1756d8f5))
+* **markdown:** wrap heading text in `span` ([b7e4673](https://github.com/drizzer14/v10i.dev/commit/b7e467379d508531e04734fce3885a05d200743f))
+* **post:** provide `key` prop to the page ([8f6a297](https://github.com/drizzer14/v10i.dev/commit/8f6a2973508572dfe312e47b0efe3c3f689adf1d))
+* **readme:** typo ([7cedcc6](https://github.com/drizzer14/v10i.dev/commit/7cedcc60f28b3032c5fd660a5f4cd332c52149c9))
+* remove sentry ([d0ab955](https://github.com/drizzer14/v10i.dev/commit/d0ab95587959ab3348f2d90de680e3b2d56397f9))
+* set Image `object-fit` to `contain` ([c458556](https://github.com/drizzer14/v10i.dev/commit/c4585562c5ad4b944ce0de69c53977441f83677c))
+* **theme:** correct code font family name ([d41ecfc](https://github.com/drizzer14/v10i.dev/commit/d41ecfcbae1a54f87ec3f56aba95b351040418a7))
+* **typography:** make `code` font size relative to the parent ([498939c](https://github.com/drizzer14/v10i.dev/commit/498939cc4b7e398155cc14841ea4becf03cc0759))
+
 ## 1.2.0 (2021-11-10)
 
 
