@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.2.0 (2021-11-10)
+
+
+### Features
+
+* **markdown:** add `yaml` language support ([6fc51d9](https://github.com/drizzer14/v10i.dev/commit/6fc51d9169eae7705465f480bf48aaf5b0689e39))
+
+
+### Bug Fixes
+
+* **markdown:** properly generate complex headings ([aae251f](https://github.com/drizzer14/v10i.dev/commit/aae251fc8ad7631b6d0ea26ea122081274fae08d))
+* **post:** provide `key` prop to the page ([8f6a297](https://github.com/drizzer14/v10i.dev/commit/8f6a2973508572dfe312e47b0efe3c3f689adf1d))
+* **readme:** typo ([7cedcc6](https://github.com/drizzer14/v10i.dev/commit/7cedcc60f28b3032c5fd660a5f4cd332c52149c9))
+
 ## 1.1.0 (2021-11-09)
 
 
