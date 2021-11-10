@@ -100,7 +100,7 @@ export const Typography = createGlobalStyle`
 
     padding: 4px 6px;
 
-    font-size: 0.9rem;
+    font-size: 0.9em;
     line-height: 1;
 
     border-radius: 3px;
