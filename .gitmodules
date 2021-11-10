@@ -1,0 +1,3 @@
+[submodule "content"]
+	path = content
+	url = git@github.com:drizzer14/v10i.content.git
