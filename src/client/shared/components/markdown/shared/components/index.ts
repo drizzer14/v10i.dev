@@ -1,1 +1,1 @@
-export * from './anchor';
+export { Anchor } from './anchor';

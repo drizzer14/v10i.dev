@@ -1,4 +1,5 @@
 import { useMemo } from 'react';
+import compose from 'fnts/compose';
 import { toString } from 'mdast-util-to-string';
 import type { HeadingComponent } from 'react-markdown/lib/ast-to-react';
 
@@ -12,7 +13,7 @@ export const Heading: HeadingComponent = ({
   level,
   ...props
 }) => {
-  const id = useMemo(() => makeSlug(toString(node)), [node]);
+  const id = useMemo(() => compose(makeSlug, toString)(node), [node]);
 
   return (
     // @ts-ignore: mistyping of `children` type

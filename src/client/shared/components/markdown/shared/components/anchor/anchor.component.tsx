@@ -1,16 +1,16 @@
-import Link from 'next/link';
-import { AnchorHTMLAttributes, FC } from 'react';
+import { AnchorHTMLAttributes, forwardRef } from 'react';
 
 import * as Styled from './anchor.styles';
 
-type AnchorProps = Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'href'> & {
-  href: string;
-};
+export type AnchorProps = AnchorHTMLAttributes<HTMLAnchorElement>;
 
-export const Anchor: FC<AnchorProps> = ({ children, href, className }) => {
-  return (
-    <Link href={href} passHref>
-      <Styled.Anchor className={className}>{children}</Styled.Anchor>
-    </Link>
-  );
-};
+export const Anchor = forwardRef<HTMLAnchorElement, AnchorProps>(
+  // eslint-disable-next-line prefer-arrow/prefer-arrow-functions
+  function Anchor({ children, href, className }, ref) {
+    return (
+      <Styled.Anchor ref={ref} href={href} className={className}>
+        {children}
+      </Styled.Anchor>
+    );
+  }
+);
