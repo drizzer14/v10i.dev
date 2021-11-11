@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 1.2.2 (2021-11-11)
+
+
+### Bug Fixes
+
+* **markdown:** update links generation ([f39b99c](https://github.com/drizzer14/v10i.dev/commit/f39b99c6bf8c6b61dda5d5c44a38c904b78c7dbc))
+
 ### 1.2.1 (2021-11-10)
 
 
