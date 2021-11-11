@@ -1,5 +1,4 @@
 import slugger from 'github-slugger';
 
-export const makeSlug = (anchor: string): string => {
-  return slugger.slug(anchor);
-};
+export const makeSlug = (anchor: string): string =>
+  slugger.slug(anchor).replace(/^-/, '');

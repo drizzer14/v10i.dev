@@ -1,10 +1,12 @@
+import Link from 'next/link';
+import compose from 'fnts/compose';
 import remarkGfm from 'remark-gfm';
 import remarkToc from 'remark-toc';
 import type {
-  Text,
   OrderedListComponent,
   UnorderedListComponent,
 } from 'react-markdown/lib/ast-to-react';
+import { toString } from 'mdast-util-to-string';
 import remarkUnwrapImages from 'remark-unwrap-images';
 import { uriTransformer } from 'react-markdown/lib/uri-transformer';
 import type { ReactMarkdownOptions } from 'react-markdown/lib/react-markdown';
@@ -19,12 +21,13 @@ import { List, ListItem } from './list';
 import { makeSlug } from './shared/utils';
 import { Blockquote } from './blockquote';
 import { Anchor } from './shared/components';
+import type { AnchorProps } from './shared/components/anchor';
 
 export const markdownConfig: Omit<ReactMarkdownOptions, 'children'> = {
   remarkPlugins: [remarkGfm, remarkUnwrapImages, [remarkToc, { maxDepth: 3 }]],
   transformLinkUri: (href, children) => {
     if (href.startsWith('#')) {
-      return `#${makeSlug((children[0] as Text).value)}`;
+      return `#${compose(makeSlug, toString)(children)}`;
     }
 
     return uriTransformer(href);
@@ -38,8 +41,14 @@ export const markdownConfig: Omit<ReactMarkdownOptions, 'children'> = {
     h3: Heading,
     h4: Heading,
     h5: Heading,
-    // @ts-ignore: incompatible library types
-    a: Anchor,
+    a: ({ href, ...props }) =>
+      href?.startsWith('/') ? (
+        <Link href={href} passHref>
+          <Anchor {...(props as AnchorProps)} />
+        </Link>
+      ) : (
+        <Anchor href={href} {...(props as AnchorProps)} />
+      ),
     ol: List as OrderedListComponent,
     ul: List as UnorderedListComponent,
     li: ListItem,
