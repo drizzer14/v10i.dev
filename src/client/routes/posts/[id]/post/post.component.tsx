@@ -3,6 +3,7 @@ import type { FC } from 'react';
 import { SEO } from '@/modules/seo';
 import { Markdown } from '@/shared/components';
 import { lazyLoad, matchDevice } from '@/shared/utils';
+import { markdownConfig } from '@/shared/components/markdown';
 import type { Post as PostType, SEOProps } from 'shared/entity';
 
 import packageJSON from '../../../../../../package.json';
@@ -62,13 +63,13 @@ export const Post: FC<PostProps> = ({
 
         <Styled.Meta date={date} readTime={readTime} />
 
-        {excerpt && <Markdown>{excerpt}</Markdown>}
+        {excerpt && <Markdown {...markdownConfig}>{excerpt}</Markdown>}
 
         {matchDevice({
           nonDesktop: () => <Share title={title} text={excerpt!} url={url} />,
         })}
 
-        <Markdown>{children}</Markdown>
+        <Markdown {...markdownConfig}>{children}</Markdown>
 
         {matchDevice({
           nonDesktop: () => <Share title={title} text={excerpt!} url={url} />,

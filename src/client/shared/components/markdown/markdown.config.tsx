@@ -23,7 +23,9 @@ import { Blockquote } from './blockquote';
 import { Anchor } from './shared/components';
 import type { AnchorProps } from './shared/components/anchor';
 
-export const markdownConfig: Omit<ReactMarkdownOptions, 'children'> = {
+export type MarkdownConfig = Omit<ReactMarkdownOptions, 'children'>;
+
+export const markdownConfig: MarkdownConfig = {
   remarkPlugins: [remarkGfm, remarkUnwrapImages, [remarkToc, { maxDepth: 3 }]],
   transformLinkUri: (href, children) => {
     if (href.startsWith('#')) {
