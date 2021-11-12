@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/drizzer14/v10i.dev/compare/1.2.2...1.3.0) (2021-11-12)
+
+
+### Features
+
+* **markdown:** support markdown in image caption ([e312e58](https://github.com/drizzer14/v10i.dev/commit/e312e58688894a391dc537ceaea54c42960947ec))
+
 ### 1.2.2 (2021-11-11)
 
 
