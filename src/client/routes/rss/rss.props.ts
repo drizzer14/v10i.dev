@@ -17,6 +17,7 @@ import { seoConfig } from '@/modules/seo';
 import { appConfig } from 'shared/config';
 import { Markdown } from '@/shared/components';
 import { RequestError, SearchResult } from 'shared/entity';
+import { markdownConfig } from '@/shared/components/markdown';
 import { internalAPIRequest, PageProps } from '@/shared/entity';
 
 import packageJSON from '../../../../package.json';
@@ -75,6 +76,7 @@ export const getServerSideProps = maybeNotFoundGSSP(
               content: renderToString(
                 createElement(Markdown, {
                   children: content!,
+                  ...markdownConfig,
                 })
               ),
               author: [author],

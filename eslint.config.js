@@ -158,7 +158,7 @@ module.exports = {
     'no-console': 'off',
     'newline-before-return': 'error',
 
-    'eslint-comments/no-unused-disable': 'error',
+    'eslint-comments/no-unused-disable': 'warn',
 
     'boundaries/no-ignored': 'off',
     'boundaries/element-types': [
