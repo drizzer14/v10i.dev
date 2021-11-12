@@ -11,15 +11,17 @@ export const Footer = styled.footer`
   width: 100%;
   max-width: ${mobileWidth}px;
 
-  padding: 0 2rem 2rem;
+  padding: 2rem;
 
   color: var(--faint-strong-text);
+
+  transition: padding 150ms;
 
   & > *:not(:first-child) {
     margin-top: 1rem;
   }
 
   ${nonMobileWithGap`
-    padding: 1rem 0 2rem;
+    padding: 2rem 0;
   `}
 `;

@@ -10,10 +10,10 @@ export const tryMakeLineHeight = (
 
   switch (height) {
     case 'h1':
-    case 'h2': {
+    case 'h2':
+    case 'h3': {
       return calculate(0.25);
     }
-    case 'h3':
     case 'h4':
     case 'p':
     case 'small': {

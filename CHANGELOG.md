@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/drizzer14/v10i.dev/compare/1.3.0...1.4.0) (2021-11-12)
+
+
+### Features
+
+* render post image placeholder in list while it loads ([dc0fa5a](https://github.com/drizzer14/v10i.dev/commit/dc0fa5abd64a2e86a9d9770778ba84753708740f))
+* update layout shifting styles ([438ec82](https://github.com/drizzer14/v10i.dev/commit/438ec82e1f9e93991c356a15bee18570eb852baa))
+
 ## [1.3.0](https://github.com/drizzer14/v10i.dev/compare/1.2.2...1.3.0) (2021-11-12)
 
 

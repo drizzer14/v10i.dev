@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { mobileWidth } from '@/shared/mixin';
+import { mobileWidth, nonMobileWithGap } from '@/shared/mixin';
 
 export const Main = styled.main`
   display: flex;
@@ -11,5 +11,11 @@ export const Main = styled.main`
   width: 100%;
   max-width: ${mobileWidth}px;
 
-  padding: 2rem 0;
+  padding: 2rem;
+
+  transition: padding 150ms;
+
+  ${nonMobileWithGap`
+    padding: 2rem 0;
+  `}
 `;
