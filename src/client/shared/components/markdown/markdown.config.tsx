@@ -11,6 +11,8 @@ import remarkUnwrapImages from 'remark-unwrap-images';
 import { uriTransformer } from 'react-markdown/lib/uri-transformer';
 import type { ReactMarkdownOptions } from 'react-markdown/lib/react-markdown';
 
+import { orUndefined } from 'shared/utils';
+
 import { Image } from '../image';
 
 import { Pre } from './pre';
@@ -35,7 +37,7 @@ export const markdownConfig: MarkdownConfig = {
     return uriTransformer(href);
   },
   linkTarget: (href) => {
-    return href.startsWith('#') ? undefined : '_blank';
+    return orUndefined(!href.startsWith('#') && '_blank');
   },
   components: {
     h1: Heading,
