@@ -14,6 +14,8 @@ export const Header = styled.header`
 
   padding: 2rem;
 
+  transition: padding 150ms;
+
   ${nonMobileWithGap`
     padding: 2rem 0;
   `}

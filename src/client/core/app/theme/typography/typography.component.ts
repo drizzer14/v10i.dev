@@ -52,6 +52,14 @@ export const Typography = createGlobalStyle`
     letter-spacing: 0.03em;
   }
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    transition: font-size 150ms;
+  }
+
   ${nonMobile`
     h1 {
       font-size: 2.488rem;
