@@ -12,12 +12,20 @@ type ImageProps = {
   alt: string;
   title?: string;
   className?: string;
+
+  onLoad?: () => void;
 };
 
-export const Image: FC<ImageProps> = ({ src, alt, title, className }) => {
+export const Image: FC<ImageProps> = ({
+  src,
+  alt,
+  title,
+  className,
+  onLoad,
+}) => {
   return (
     <Styled.Figure className={className}>
-      <Styled.Image src={src} alt={alt} />
+      <Styled.Image src={src} alt={alt} onLoad={onLoad} />
 
       {title && <Caption>{title}</Caption>}
     </Styled.Figure>

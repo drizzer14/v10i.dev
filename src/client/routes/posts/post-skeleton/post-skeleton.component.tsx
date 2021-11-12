@@ -1,10 +1,14 @@
 import { FC, memo, useMemo } from 'react';
 
 import { rng } from 'shared/utils';
-import { DotDivider } from '@/routes/posts/shared/components';
+import {
+  Skeleton,
+  DotDivider,
+  ImageSkeleton,
+} from '@/routes/posts/shared/components';
+import type { SkeletonSize } from '@/routes/posts/shared/components/skeleton';
 
 import * as Styled from './post-skeleton.styles';
-import { Skeleton, SkeletonSize } from './skeleton';
 
 const makeRandomSkeletonSizes = (min: number, max = min): SkeletonSize[] => {
   return Array.from({ length: rng(min, max) }, (_, index) => ({
@@ -12,6 +16,10 @@ const makeRandomSkeletonSizes = (min: number, max = min): SkeletonSize[] => {
     max: 100,
     unit: '%',
   }));
+};
+
+const generateSkeletonKey = (seed: SkeletonSize): string => {
+  return `${JSON.stringify(seed)}${Math.random().toString(32)}`;
 };
 
 export const PostSkeleton: FC = memo(function PostSkeleton() {
@@ -27,14 +35,10 @@ export const PostSkeleton: FC = memo(function PostSkeleton() {
 
   return (
     <Styled.PostSkeleton>
-      <>{hasImage && <Styled.ImageSkeleton />}</>
+      {hasImage && <ImageSkeleton />}
 
       {title.map((width) => (
-        <Skeleton
-          key={`${JSON.stringify(width)}${Math.random().toString(32)}`}
-          height="h1"
-          width={width}
-        />
+        <Skeleton key={generateSkeletonKey(width)} height="h1" width={width} />
       ))}
 
       <Styled.MetaSkeleton>
@@ -47,11 +51,7 @@ export const PostSkeleton: FC = memo(function PostSkeleton() {
 
       <Styled.DescriptionSkeleton>
         {description.map((width) => (
-          <Skeleton
-            key={`${JSON.stringify(width)}${Math.random().toString(32)}`}
-            height="p"
-            width={width}
-          />
+          <Skeleton key={generateSkeletonKey(width)} height="p" width={width} />
         ))}
       </Styled.DescriptionSkeleton>
     </Styled.PostSkeleton>

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { nonMobile, nonMobileWithGap } from '@/shared/mixin';
+import { nonMobile } from '@/shared/mixin';
 import { Image } from '@/shared/components';
 
 export const PostCard = styled.article`
@@ -8,12 +8,6 @@ export const PostCard = styled.article`
   flex-direction: column;
 
   width: 100%;
-
-  padding: 0 2rem;
-
-  ${nonMobileWithGap`
-    padding: 0;
-  `}
 `;
 
 export const Hero = styled(Image)`
@@ -30,7 +24,6 @@ export const Hero = styled(Image)`
 
   ${nonMobile`
     position: static;
-    left: unset;
 
     width: 100%;
 
