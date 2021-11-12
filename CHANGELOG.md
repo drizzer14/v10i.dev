@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.1](https://github.com/drizzer14/v10i.dev/compare/1.4.0...1.4.1) (2021-11-12)
+
+
+### Bug Fixes
+
+* **markdown:** pass `target` to anchor ([bfa841d](https://github.com/drizzer14/v10i.dev/commit/bfa841d3afae0adf0f86b7608e6333b95984c4f9))
+
 ## [1.4.0](https://github.com/drizzer14/v10i.dev/compare/1.3.0...1.4.0) (2021-11-12)
 
 

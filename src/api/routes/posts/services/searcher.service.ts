@@ -6,9 +6,9 @@ import { fold, isJust } from 'fnts/maybe/operators';
 import bifoldMap from 'fnts/either/operators/bifold-map';
 import { Inject, Injectable, Logger } from '@nestjs/common';
 
-import { rethrow } from 'shared/utils';
 import { APIConfig } from '$/core/config';
 import { githubAPIRequest } from '$/shared/entity';
+import { rethrow, orUndefined } from 'shared/utils';
 import type { ListPost, RequestError, SearchResult } from 'shared/entity';
 
 import { Acquirer } from './acquirer.service';
@@ -128,7 +128,7 @@ export class Searcher {
         return just({
           id,
           title: seo.title,
-          excerpt: full ? excerpt : undefined,
+          excerpt: orUndefined(full && excerpt),
           content: full ? content : excerpt,
           date: seo.date,
           url: seo.url,
