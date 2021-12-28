@@ -1,23 +1,18 @@
 import styled from 'styled-components';
 import type { NormalComponents } from 'react-markdown/lib/complex-types';
 
-import { nonMobile } from '@/shared/mixin';
-
 export const Blockquote = styled.blockquote`
   position: relative;
 
-  margin: 2rem -2rem;
-  padding: 1.5rem 2rem;
+  margin: 2rem 0;
+  padding: 0.5rem 0 0.5rem 0.75rem;
 
   overflow: hidden;
 
   color: var(--faint-strong-text);
 
-  background-color: var(--faint-weak-background);
-
-  ${nonMobile`
-    border-radius: 1rem;
-  `}
+  border-left: 0.5rem solid var(--faint-strong-background);
+  border-radius: 0.25rem;
 
   & > *:last-child {
     margin-bottom: 0;
