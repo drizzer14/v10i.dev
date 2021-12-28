@@ -28,10 +28,7 @@ GitHub is used as a CMS for this project, the content is stored in the private (
       - `react-markdown`
       - `remark`
       - `gray-matter`
-      - _Code Blocks_:
-        - `lowlight` _for AST parsing_
-        - `highlight.js` _for language support_
-        - `hast-util-to-html` _for HTML output_
+      - _`prismjs` _for code blocks_
   - _Back-end (API routes)_:
     - NestJS 8
 - Babel

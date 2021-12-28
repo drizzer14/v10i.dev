@@ -17,58 +17,82 @@ export const Code = styled.code`
   ${nonMobile`
     border-radius: 0 1rem 1rem 1rem;
   `}
-
   &::-webkit-scrollbar {
     display: none;
   }
 
-  .hljs- {
-    &comment {
-      color: var(--faint-strong-down);
+  .keyword {
+    color: hsl(334, 40%, 73%);
+  }
 
-      font-style: italic;
+  .operator,
+  .function {
+    color: hsl(201, 75%, 69%);
+  }
+
+  .punctuation {
+    color: hsl(215, 11%, 39%);
+  }
+
+  .comment {
+    color: hsl(219, 14%, 71%);
+    font-style: italic;
+  }
+
+  .parameter,
+  .key {
+    color: hsl(204, 29%, 82%);
+  }
+
+  .number,
+  .boolean {
+    color: hsl(51, 41%, 73%);
+  }
+
+  .string {
+    color: hsl(97, 31%, 65%);
+  }
+
+  .class-name,
+  .builtin {
+    color: hsl(96, 31%, 65%);
+  }
+
+  @media (prefers-color-scheme: light) {
+    .keyword {
+      color: hsl(334, 40%, 63%);
     }
 
-    &punctuation {
-      color: var(--faint-strong-down);
+    .operator,
+    .function {
+      color: hsl(201, 80%, 49%);
     }
 
-    &function {
-      color: var(--base-strong-down);
+    .punctuation {
+      color: hsl(215, 11%, 69%);
     }
 
-    &title,
-    &keyword {
-      color: var(--base-strong-up);
+    .comment {
+      color: hsl(219, 14%, 61%);
     }
 
-    &operator {
-      color: var(--faint-strong);
+    .parameter,
+    .key {
+      color: hsl(204, 19%, 32%);
     }
 
-    &attr,
-    &class,
-    &params,
-    &built_in {
-      color: var(--accent-strong-up);
+    .number,
+    .boolean {
+      color: hsl(51, 81%, 43%);
     }
 
-    &string {
-      color: hsl(calc(var(--hue) - 80), 65%, 30%);
+    .string {
+      color: hsl(97, 31%, 55%);
     }
 
-    &number {
-      color: hsl(calc(var(--hue) + 100), 32%, 45%);
-    }
-
-    @media (prefers-color-scheme: dark) {
-      &string {
-        color: hsl(calc(var(--hue) - 80), 40%, 45%);
-      }
-
-      &number {
-        color: hsl(calc(var(--hue) + 100), 35%, 55%);
-      }
+    .class-name,
+    .builtin {
+      color: hsl(96, 31%, 55%);
     }
   }
 `;
