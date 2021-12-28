@@ -97,6 +97,11 @@ export const Palette = createGlobalStyle`
 
   code {
     background-color: var(--faint-weak-background);
+    border: 2px solid var(--base-weak-background);
+  }
+  
+  pre > code {
+    border: none;
   }
   
   ::selection {

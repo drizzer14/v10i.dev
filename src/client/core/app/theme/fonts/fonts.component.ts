@@ -39,7 +39,13 @@ export const Fonts = createGlobalStyle`
     --font-code: ${codeFontFamily}, monospace;
   }
 
-  ${makeFamilyFontFaces(codeFontFamily, ['Light', 'Regular'])}
+  ${makeFamilyFontFaces(codeFontFamily, [
+    'Light',
+    'Regular',
+    'Medium',
+    'SemiBold',
+    'Bold',
+  ])}
 
   ${makeFamilyFontFaces(baseFontFamily, [
     'Light',
