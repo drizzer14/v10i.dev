@@ -30,12 +30,12 @@ export const Code = styled.code`
     color: hsl(201, 75%, 69%);
   }
 
-  .punctuation {
+  .punctuation,
+  .comment {
     color: hsl(215, 11%, 39%);
   }
 
   .comment {
-    color: hsl(219, 14%, 71%);
     font-style: italic;
   }
 
@@ -60,7 +60,7 @@ export const Code = styled.code`
 
   @media (prefers-color-scheme: light) {
     .keyword {
-      color: hsl(334, 40%, 63%);
+      color: hsl(334, 50%, 63%);
     }
 
     .operator,
@@ -68,12 +68,9 @@ export const Code = styled.code`
       color: hsl(201, 80%, 49%);
     }
 
-    .punctuation {
-      color: hsl(215, 11%, 69%);
-    }
-
+    .punctuation,
     .comment {
-      color: hsl(219, 14%, 61%);
+      color: hsl(215, 11%, 69%);
     }
 
     .parameter,
@@ -87,12 +84,12 @@ export const Code = styled.code`
     }
 
     .string {
-      color: hsl(97, 31%, 55%);
+      color: hsl(97, 41%, 55%);
     }
 
     .class-name,
     .builtin {
-      color: hsl(96, 31%, 55%);
+      color: hsl(96, 41%, 55%);
     }
   }
 `;
