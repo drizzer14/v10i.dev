@@ -1,5 +1,6 @@
 import dayjs from 'dayjs';
 import inject from 'fnts/inject';
+import type { Map } from 'fnts/types';
 import axios, { AxiosResponse } from 'axios';
 import { just, Maybe, nothing } from 'fnts/maybe';
 import { fold, isJust } from 'fnts/maybe/operators';
@@ -68,8 +69,6 @@ export class Searcher {
         method: 'get',
         params: {
           q: `repo:${this.apiConfig.gitHubContentRepoOwner}/${this.apiConfig.gitHubContentRepoName}`,
-          sort: 'indexed',
-          order: 'desc',
           page,
           per_page: size,
         },
@@ -97,7 +96,7 @@ export class Searcher {
                   data.items.map((meta) => this.getOne(meta, full))
                 ),
                 isJust,
-                (post) => fold(post)!
+                fold as Map<Maybe<ListPost>, ListPost>
               ),
             ].sort(({ date: dateA }, { date: dateB }) => {
               return dayjs(dateB).unix() - dayjs(dateA).unix();
