@@ -90,7 +90,6 @@ export const Typography = createGlobalStyle`
 
   pre,
   code {
-    font-weight: 300;
     font-family: var(--font-code);
   }
 

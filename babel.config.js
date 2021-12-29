@@ -10,6 +10,12 @@ module.exports = {
     ],
   ],
   plugins: [
+    [
+      'prismjs',
+      {
+        languages: ['javascript', 'typescript', 'yaml', 'haskell'],
+      },
+    ],
     'babel-plugin-transform-typescript-metadata',
     [
       '@babel/plugin-proposal-decorators',

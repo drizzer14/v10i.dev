@@ -1,5 +1,6 @@
 import dayjs from 'dayjs';
 import inject from 'fnts/inject';
+import type { Map } from 'fnts/types';
 import axios, { AxiosResponse } from 'axios';
 import { just, Maybe, nothing } from 'fnts/maybe';
 import { fold, isJust } from 'fnts/maybe/operators';
@@ -8,7 +9,7 @@ import { Inject, Injectable, Logger } from '@nestjs/common';
 
 import { APIConfig } from '$/core/config';
 import { githubAPIRequest } from '$/shared/entity';
-import { rethrow, orUndefined } from 'shared/utils';
+import { rethrow, orUndefined, comprehend } from 'shared/utils';
 import type { ListPost, RequestError, SearchResult } from 'shared/entity';
 
 import { Acquirer } from './acquirer.service';
@@ -68,8 +69,6 @@ export class Searcher {
         method: 'get',
         params: {
           q: `repo:${this.apiConfig.gitHubContentRepoOwner}/${this.apiConfig.gitHubContentRepoName}`,
-          sort: 'indexed',
-          order: 'asc',
           page,
           per_page: size,
         },
@@ -90,17 +89,18 @@ export class Searcher {
                 last: page,
               };
 
-          const posts = (
-            await Promise.all(data.items.map((meta) => this.getOne(meta, full)))
-          )
-            .filter(isJust)
-            .map((post) => fold(post)!)
-            .sort(({ date: dateA }, { date: dateB }) => {
-              return dayjs(dateB).unix() - dayjs(dateA).unix();
-            });
-
           return {
-            posts,
+            posts: [
+              ...comprehend(
+                await Promise.all(
+                  data.items.map((meta) => this.getOne(meta, full))
+                ),
+                isJust,
+                fold as Map<Maybe<ListPost>, ListPost>
+              ),
+            ].sort(({ date: dateA }, { date: dateB }) => {
+              return dayjs(dateB).unix() - dayjs(dateA).unix();
+            }),
             postsLeft:
               page && size ? Math.max(0, data.total_count - page * size) : 0,
             nextPage,

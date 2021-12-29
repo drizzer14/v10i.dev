@@ -65,7 +65,7 @@ export const markdownConfig: MarkdownConfig = {
       const [, language] = /language-(\w+)/.exec(className || '') || [];
 
       return !inline ? (
-        <Code language={language}>{String(children)}</Code>
+        <Code language={language!}>{String(children)}</Code>
       ) : (
         <code>{children}</code>
       );

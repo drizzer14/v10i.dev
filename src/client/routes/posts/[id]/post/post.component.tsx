@@ -2,9 +2,14 @@ import type { FC } from 'react';
 
 import { SEO } from '@/modules/seo';
 import { Markdown } from '@/shared/components';
-import { lazyLoad, matchDevice } from '@/shared/utils';
 import { markdownConfig } from '@/shared/components/markdown';
 import type { Post as PostType, SEOProps } from 'shared/entity';
+import {
+  formatDateString,
+  formatReadTime,
+  lazyLoad,
+  matchDevice,
+} from '@/shared/utils';
 
 import packageJSON from '../../../../../../package.json';
 
@@ -61,7 +66,9 @@ export const Post: FC<PostProps> = ({
 
         <Styled.Title>{title}</Styled.Title>
 
-        <Styled.Meta date={date} readTime={readTime} />
+        <Styled.Meta
+          contents={[formatDateString(date!), formatReadTime(readTime)]}
+        />
 
         {excerpt && <Markdown {...markdownConfig}>{excerpt}</Markdown>}
 

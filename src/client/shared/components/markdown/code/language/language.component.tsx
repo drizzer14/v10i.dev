@@ -15,6 +15,9 @@ export const Language: FC<LanguageProps> = ({ language }) => {
       case 'javascript': {
         return 'JavaScript';
       }
+      case 'haskell': {
+        return 'Haskell';
+      }
       case 'tsx':
       case 'jsx':
       case 'yaml': {

@@ -158,6 +158,8 @@ module.exports = {
     'no-console': 'off',
     'newline-before-return': 'error',
 
+    'array-func/prefer-array-from': 'warn',
+
     'eslint-comments/no-unused-disable': 'warn',
 
     'boundaries/no-ignored': 'off',

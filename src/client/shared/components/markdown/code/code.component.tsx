@@ -1,22 +1,13 @@
-import compose from 'fnts/compose';
-import { toHtml } from 'hast-util-to-html';
-import { lowlight } from 'lowlight/lib/core';
-import yaml from 'highlight.js/lib/languages/yaml';
+import { highlight, languages } from 'prismjs';
 import { DOMAttributes, FC, useMemo } from 'react';
-import javascript from 'highlight.js/lib/languages/javascript';
-import typescript from 'highlight.js/lib/languages/typescript';
 
 import { Copy } from './copy';
 import { Language } from './language';
 import * as Styled from './code.styles';
 
-lowlight.registerLanguage('yaml', yaml);
-lowlight.registerLanguage('javascript', javascript);
-lowlight.registerLanguage('typescript', typescript);
-
 type CodeProps = {
   children: string;
-  language?: string;
+  language: string;
 };
 
 export const Code: FC<CodeProps> = ({ children, language }) => {
@@ -24,12 +15,11 @@ export const Code: FC<CodeProps> = ({ children, language }) => {
     DOMAttributes<HTMLPreElement>['dangerouslySetInnerHTML']
   >(
     () => ({
-      __html: compose(
-        toHtml,
+      __html: highlight(
+        children.replace(/\n$/, ''),
+        languages[language]!,
         language
-          ? (string: string) => lowlight.highlight(language, string)
-          : lowlight.highlightAuto
-      )(children.replace(/\n$/, '')),
+      ),
     }),
     [children, language]
   );
