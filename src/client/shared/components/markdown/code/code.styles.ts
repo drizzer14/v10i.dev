@@ -26,7 +26,8 @@ export const Code = styled.code`
   }
 
   .operator,
-  .function {
+  .function,
+  .hvariable {
     color: hsl(201, 75%, 69%);
   }
 
@@ -45,7 +46,8 @@ export const Code = styled.code`
   }
 
   .number,
-  .boolean {
+  .boolean,
+  .constant {
     color: hsl(51, 41%, 73%);
   }
 
@@ -64,7 +66,8 @@ export const Code = styled.code`
     }
 
     .operator,
-    .function {
+    .function,
+    .hvariable {
       color: hsl(201, 80%, 49%);
     }
 
@@ -79,7 +82,8 @@ export const Code = styled.code`
     }
 
     .number,
-    .boolean {
+    .boolean,
+    .constant {
       color: hsl(51, 81%, 43%);
     }
 
