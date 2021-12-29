@@ -5,6 +5,7 @@ export * from './try-vibrate';
 export * from './match-device';
 export * from './report-error';
 export * from './match-runtime';
+export * from './format-read-time';
 export * from './create-page-props';
 export * from './format-date-string';
 export * from './maybe-not-found-gssp';

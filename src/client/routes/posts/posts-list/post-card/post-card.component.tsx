@@ -1,12 +1,18 @@
+import dayjs from 'dayjs';
 import Link from 'next/link';
 import maybe, { Maybe } from 'fnts/maybe';
 import fold from 'fnts/maybe/operators/fold';
 import { FC, ReactNode, useMemo } from 'react';
 
+import {
+  formatDateString,
+  formatReadTime,
+  lazyLoad,
+  tryVibrate,
+} from '@/shared/utils';
 import { useToggle } from '@/shared/hooks';
 import type { ListPost } from 'shared/entity';
 import { Meta } from '@/routes/posts/shared/components';
-import { lazyLoad, tryVibrate } from '@/shared/utils';
 
 import * as Styled from './post-card.styles';
 
@@ -48,6 +54,10 @@ export const PostCard: FC<PostCardProps> = ({
     );
   }, [imageURL, title, toggleImage, hasImageLoaded]);
 
+  const isNewPost = useMemo(() => {
+    return dayjs().diff(formatDateString(date!), 'day') <= 7;
+  }, [date]);
+
   return (
     <Styled.PostCard>
       <Link href={`/p/${id}`} passHref>
@@ -61,7 +71,13 @@ export const PostCard: FC<PostCardProps> = ({
         </Styled.Link>
       </Link>
 
-      <Meta date={date} readTime={readTime} />
+      <Meta
+        contents={[
+          formatDateString(date!),
+          formatReadTime(readTime),
+          ...(isNewPost ? ['New 🔥'] : []),
+        ]}
+      />
 
       {content && (
         <Styled.Description>

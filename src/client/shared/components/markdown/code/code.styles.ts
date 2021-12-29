@@ -51,13 +51,10 @@ export const Code = styled.code`
     color: hsl(51, 41%, 73%);
   }
 
-  .string {
+  .string,
+  .builtin,
+  .class-name {
     color: hsl(97, 31%, 65%);
-  }
-
-  .class-name,
-  .builtin {
-    color: hsl(96, 31%, 65%);
   }
 
   @media (prefers-color-scheme: light) {
@@ -87,13 +84,10 @@ export const Code = styled.code`
       color: hsl(51, 81%, 43%);
     }
 
-    .string {
+    .string,
+    .builtin,
+    .class-name {
       color: hsl(97, 41%, 55%);
-    }
-
-    .class-name,
-    .builtin {
-      color: hsl(96, 41%, 55%);
     }
   }
 `;
