@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/drizzer14/v10i.dev/compare/1.4.1...1.5.0) (2021-12-29)
+
+
+### Features
+
+* **api:** update posts sorting ([4172232](https://github.com/drizzer14/v10i.dev/commit/4172232a56b4a0e944cf01c7e0e85151e07bb70e))
+* **markdown:** replace `lowlight` with `prismjs`, add Haskell support ([a8113cd](https://github.com/drizzer14/v10i.dev/commit/a8113cd5d9e5dd0ee1b06ea5c4b8acd5589916e2))
+* **markdown:** update `blockquote` styles ([930768d](https://github.com/drizzer14/v10i.dev/commit/930768d6b10f1294a12c48fa37703cab2a0440b4))
+* **markdown:** update `code` styles ([50f8065](https://github.com/drizzer14/v10i.dev/commit/50f8065df1b31757ad062d55133e3c05742cba07))
+* **markdown:** update `code` styles ([a67e3c6](https://github.com/drizzer14/v10i.dev/commit/a67e3c6439e0c6d42c27259eb9c5b92386080cc0))
+* update global `code` styles ([c8ba715](https://github.com/drizzer14/v10i.dev/commit/c8ba715b0e08774410955a4fa3df9826d74b8b7d))
+
+
+### Bug Fixes
+
+* **markdown:** make `anchor` display by default ([7afc4bb](https://github.com/drizzer14/v10i.dev/commit/7afc4bbb78e10a2d63a5b29250ad59c2fad207b7))
+
 ### [1.4.1](https://github.com/drizzer14/v10i.dev/compare/1.4.0...1.4.1) (2021-11-12)
 
 
