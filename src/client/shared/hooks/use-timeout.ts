@@ -1,6 +1,6 @@
 /*
-  eslint-disable eslint-comments/disable-enable-pair, 
-  functional/immutable-data, 
+  eslint-disable eslint-comments/disable-enable-pair,
+  functional/immutable-data,
   react-hooks/exhaustive-deps
 */
 import { just } from 'fnts/maybe';
@@ -24,7 +24,8 @@ export const useTimeout = (
   }, [callback]);
 
   const clear = useCallback(() => {
-    foldMap(maybeTimeoutID.current, clearTimeout);
+    // eslint-disable-next-line functional/prefer-tacit
+    foldMap(maybeTimeoutID.current, (timeoutID) => clearTimeout(timeoutID));
   }, []);
 
   const set = useCallback(() => {

@@ -7529,12 +7529,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fnts@npm:1.2.0":
-  version: 1.2.0
-  resolution: "fnts@npm:1.2.0"
+"fnts@npm:1.3.2":
+  version: 1.3.2
+  resolution: "fnts@npm:1.3.2"
   peerDependencies:
     typescript: ">=4.2.2"
-  checksum: f74e1859aa06eba20cde36439241c3ea0be28dcb124bb0aaef3b64c47ca752b6cd7a23f8c8e8c995c24063058fae9e9f24ab354f82e3575a3e632d833d09576f
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+  checksum: 218b65d084dfca8f505ffd469f328a96964470f398b63b6115c03f074fef6f1d84986f27b063f6f145c8a3335b7323d9a5c85eaa9d9876af590d1bdf7cfa6b11
   languageName: node
   linkType: hard
 
@@ -16127,7 +16130,7 @@ __metadata:
     eslint-plugin-sonarjs: 0.10.0
     eslint-plugin-unicorn: 36.0.0
     feed: 4.2.2
-    fnts: 1.2.0
+    fnts: 1.3.2
     github-slugger: 1.4.0
     gray-matter: 4.0.3
     husky: ">=6"

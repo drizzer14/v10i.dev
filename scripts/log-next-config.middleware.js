@@ -1,5 +1,5 @@
+const tap = require('fnts/tap').default;
 const chalk = require('chalk');
-const { tap } = require('fnts/tap');
 
 const newLine = () => console.log();
 
