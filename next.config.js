@@ -46,6 +46,7 @@ module.exports = compose(
     gitHubContentRepoName: process.env.GITHUB_CONTENT_REPO_NAME,
   },
   env: {
+    appEnv: process.env.APP_ENV,
     apiURL: process.env.API_URL,
     apiRequestCacheTTL: 1000 * 60 * 60,
   },

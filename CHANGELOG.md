@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/drizzer14/v10i.dev/compare/1.5.0...1.6.0) (2022-01-03)
+
+
+### Features
+
+* add Google Analytics ([23120f4](https://github.com/drizzer14/v10i.dev/commit/23120f49e036ce880470b1f211b6f3efea985ff2))
+* add new `test` env ([4a0aa46](https://github.com/drizzer14/v10i.dev/commit/4a0aa467e234915fc83929be9a70009679777698))
+
 ## [1.5.0](https://github.com/drizzer14/v10i.dev/compare/1.4.1...1.5.0) (2021-12-29)
 
 
